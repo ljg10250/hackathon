@@ -1,5 +1,11 @@
 # 잡을 잡다
 
+**자체 API 배포 주소 · 인증 없이 GET 호출 · JSON 응답**
+
+https://seoul-youth-job-compass.ljg10250000.workers.dev/api/indicators?metric=employment_rate
+
+[API 주소 파일](API_URL.txt) · [API 서버와 호출 안내](API_SERVER.md) · [자체 API 소스 코드](worker/index.ts)
+
 React + Cloudflare Workers Static Assets / 자체 API + Supabase PostgreSQL.
 2026-10-31 기준 **공개 배포 · 추천 API · 실제 Chromium PC/모바일 검증을 통과한 제출 후보본**입니다. 공식 제출 형식 대조·팀 정보·최종 제출은 남아 있습니다.
 

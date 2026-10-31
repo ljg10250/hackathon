@@ -1,0 +1,1 @@
+https://seoul-youth-job-compass.ljg10250000.workers.dev/api/indicators?metric=employment_rate
