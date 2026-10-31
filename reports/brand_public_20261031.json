@@ -1,0 +1,92 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "brand": "잡을 잡다",
+  "verified_at": "2026-10-30T21:38:50.767Z",
+  "checks": [
+    {
+      "profile": "desktop",
+      "path": "/",
+      "title": "고용 현황 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "path": "/visualizations",
+      "title": "한눈에 보기 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "path": "/districts",
+      "title": "자치구 분석 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "path": "/occupations",
+      "title": "직종 분석 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "path": "/jobs",
+      "title": "일자리 찾기 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "path": "/jobs?mode=recommend",
+      "title": "조건 추천 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "path": "/jobs/job-d9b71a0aec07-24207",
+      "title": "공고 상세 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "path": "/",
+      "title": "고용 현황 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "path": "/visualizations",
+      "title": "한눈에 보기 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "path": "/districts",
+      "title": "자치구 분석 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "path": "/occupations",
+      "title": "직종 분석 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "path": "/jobs",
+      "title": "일자리 찾기 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "path": "/jobs?mode=recommend",
+      "title": "조건 추천 | 잡을 잡다",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "path": "/jobs/job-d9b71a0aec07-24207",
+      "title": "공고 상세 | 잡을 잡다",
+      "passed": true
+    }
+  ],
+  "passed": 14
+}

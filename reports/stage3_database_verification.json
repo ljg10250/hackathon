@@ -1,0 +1,89 @@
+{
+  "verified_at": "2026-10-30T17:53:10.314Z",
+  "project_ref": "jlnebtxrncfqzyjgasuw",
+  "result": [
+    {
+      "verification": {
+        "rls": [
+          {
+            "table": "data_imports",
+            "enabled": true
+          },
+          {
+            "table": "data_sources",
+            "enabled": true
+          },
+          {
+            "table": "jobs",
+            "enabled": true
+          },
+          {
+            "table": "youth_employment_stats",
+            "enabled": true
+          },
+          {
+            "table": "district_youth_stats",
+            "enabled": true
+          },
+          {
+            "table": "occupation_market_stats",
+            "enabled": true
+          },
+          {
+            "table": "occupation_mappings",
+            "enabled": true
+          }
+        ],
+        "counts": {
+          "jobs": 10748,
+          "data_imports": 6,
+          "data_sources": 6,
+          "occupation_mappings": 323,
+          "district_youth_stats": 275,
+          "youth_employment_stats": 92,
+          "occupation_market_stats": 92
+        },
+        "functions": [
+          {
+            "name": "compass_condition",
+            "settings": [
+              "search_path=\"\""
+            ],
+            "volatility": "i",
+            "security_definer": false
+          },
+          {
+            "name": "compass_evaluate_job",
+            "settings": [
+              "search_path=\"\""
+            ],
+            "volatility": "i",
+            "security_definer": false
+          },
+          {
+            "name": "compass_recommend_jobs",
+            "settings": [
+              "search_path=\"\"",
+              "statement_timeout=6s"
+            ],
+            "volatility": "s",
+            "security_definer": false
+          },
+          {
+            "name": "compass_validate_conditions",
+            "settings": [
+              "search_path=\"\""
+            ],
+            "volatility": "i",
+            "security_definer": false
+          }
+        ],
+        "conversions": 0,
+        "public_jobs": 10743,
+        "related_mappings": 0,
+        "unknown_workdays": 631,
+        "public_write_grants": 0
+      }
+    }
+  ]
+}

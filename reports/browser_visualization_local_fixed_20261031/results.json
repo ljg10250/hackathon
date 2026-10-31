@@ -1,0 +1,118 @@
+{
+  "base": "http://127.0.0.1:8787",
+  "verified_at": "2026-10-30T21:02:36.442Z",
+  "versions": {
+    "@axe-core/playwright": "4.14.0",
+    "playwright": "1.64.1"
+  },
+  "browserVersion": "156.0.8078.74",
+  "mode": "flows_only",
+  "browser": "Installed Chrome; isolated ephemeral contexts; headless",
+  "checks": [
+    {
+      "name": "desktop actual search selection, pagination, detail and return",
+      "passed": true
+    },
+    {
+      "name": "desktop home quarter selection and same-basis comparison",
+      "passed": true
+    },
+    {
+      "name": "desktop recover from a synthetic API failure without sample data",
+      "passed": true
+    },
+    {
+      "name": "desktop empty search and reset",
+      "passed": true
+    },
+    {
+      "name": "desktop district controls, history and job exploration",
+      "passed": true
+    },
+    {
+      "name": "desktop occupation chart controls and raw calculation",
+      "passed": true
+    },
+    {
+      "name": "desktop occupation analysis to verified-group jobs and preserved return",
+      "passed": true
+    },
+    {
+      "name": "desktop capital visualization controls and URL persistence",
+      "passed": true
+    },
+    {
+      "name": "desktop official map25areas, keyboard, heatmap275cells and period switch",
+      "passed": false,
+      "error": "locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('group', { name: '서울 자치구 청년 고용률 지도', exact: true }).getByRole('button', { name: /종로구 · 고용률/ })\u001b[22m\n\u001b[2m    - locator resolved to <g tabindex=\"0\" role=\"button\" aria-pressed=\"false\" aria-label=\"종로구 · 고용률 29.5%\">…</g>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <path fill=\"#c5dcf4\" class=\"map-area\" d=\"M449.60,190.15L456.07,193.67L458.24,196.49L459.92,195.98L460.79,198.82L467.86,201.99L478.29,214.53L485.26,216.74L488.85,220.21L494.48,219.76L493.13,228.08L495.56,232.56L498.25,234.60L498.64,236.89L506.83,241.85L512.53,242.13L517.89,246.94L520.97,247.67L521.27,249.85L529.26,246.76L536.30,247.60L536.40,255.61L549.76,246.59L554.92,238.48L555.89,238.82L562.30,232.85L567.20,224.16L573.27,219.57L582.04,230.25L595.78,242.83L598.59,243.37L610.78,239.98L613.45,242.17L…></path> from <g tabindex=\"0\" role=\"button\" aria-pressed=\"false\" aria-label=\"성북구 · 고용률 39.7%\">…</g> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <path fill=\"#c5dcf4\" class=\"map-area\" d=\"M449.60,190.15L456.07,193.67L458.24,196.49L459.92,195.98L460.79,198.82L467.86,201.99L478.29,214.53L485.26,216.74L488.85,220.21L494.48,219.76L493.13,228.08L495.56,232.56L498.25,234.60L498.64,236.89L506.83,241.85L512.53,242.13L517.89,246.94L520.97,247.67L521.27,249.85L529.26,2"
+    },
+    {
+      "name": "desktop map to same-district jobs",
+      "passed": true
+    },
+    {
+      "name": "desktop recommendation score, alternatives, unknown group and return",
+      "passed": true
+    },
+    {
+      "name": "desktop required district is not relaxed in region alternative",
+      "passed": true
+    },
+    {
+      "name": "mobile actual search selection, pagination, detail and return",
+      "passed": true
+    },
+    {
+      "name": "mobile home quarter selection and same-basis comparison",
+      "passed": true
+    },
+    {
+      "name": "mobile recover from a synthetic API failure without sample data",
+      "passed": true
+    },
+    {
+      "name": "mobile empty search and reset",
+      "passed": true
+    },
+    {
+      "name": "mobile district controls, history and job exploration",
+      "passed": true
+    },
+    {
+      "name": "mobile occupation chart controls and raw calculation",
+      "passed": true
+    },
+    {
+      "name": "mobile occupation analysis to verified-group jobs and preserved return",
+      "passed": true
+    },
+    {
+      "name": "mobile capital visualization controls and URL persistence",
+      "passed": true
+    },
+    {
+      "name": "mobile official map25areas, keyboard, heatmap275cells and period switch",
+      "passed": false,
+      "error": "expect(locator).toContainText(expected) failed\n\nLocator: locator('.map-detail')\nExpected substring: \"29.5%\"\nReceived string:    \"선택한 자치구성북구 · 2026년 상반기39.7%전년 같은 반기 대비 -2.4%p이 수치가 말하는 것이 구의 15~29세 주민 중 취업자의 비율은 39.7%입니다. 성북구은 전년 같은 시점보다 2.4%p 하락했습니다. 같은 반기 25개 구의 값은 29.5~57.5% 범위입니다. 이 차이가 근무지 일자리 수나 개인의 취업 가능성 차이를 뜻하지는 않습니다.이 구의 근무지 공고 탐색 →공고는 근무지 기준 스냅샷입니다. 주민 고용률과 모집 중 공고 수는 다른 정보입니다.\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toContainText\" locator('.map-detail') with timeout 5000ms\n  - waiting for locator('.map-detail')\n    14 × locator resolved to <article class=\"map-detail\" aria-live=\"polite\">…</article>\n       - unexpected value \"선택한 자치구성북구 · 2026년 상반기39.7%전년 같은 반기 대비 -2.4%p이 수치가 말하는 것이 구의 15~29세 주민 중 취업자의 비율은 39.7%입니다. 성북구은 전년 같은 시점보다 2.4%p 하락했습니다. 같은 반기 25개 구의 값은 29.5~57.5% 범위입니다. 이 차이가 근무지 일자리 수나 개인의 취업 가능성 차이를 뜻하지는 않습니다.이 구의 근무지 공고 탐색 →공고는 근무지 기준 스냅샷입니다. 주민 고용률과 모집 중 공고 수는 다른 정보입니다.\"\n"
+    },
+    {
+      "name": "mobile map to same-district jobs",
+      "passed": true
+    },
+    {
+      "name": "mobile recommendation score, alternatives, unknown group and return",
+      "passed": true
+    },
+    {
+      "name": "mobile required district is not relaxed in region alternative",
+      "passed": true
+    }
+  ],
+  "audits": [],
+  "errors": [],
+  "requests": [],
+  "passed": 22,
+  "failed": 2,
+  "axe_violations": null,
+  "limitations": "Chromium viewport/touch emulation only. Does not certify all WCAG criteria or physical iOS/Android devices."
+}

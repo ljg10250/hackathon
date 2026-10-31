@@ -1,0 +1,29 @@
+{
+  "verified_at": "2026-10-30T20:12:10.849Z",
+  "project_ref": "jlnebtxrncfqzyjgasuw",
+  "counts": {
+    "jobs": 10748,
+    "data_imports": 6,
+    "data_sources": 6,
+    "occupation_mappings": 323,
+    "district_youth_stats": 275,
+    "youth_employment_stats": 92,
+    "occupation_market_stats": 92
+  },
+  "public_jobs": 10743,
+  "rls_disabled": 0,
+  "related_edges": 0,
+  "public_write_grants": 0,
+  "employment_validation": [
+    {
+      "count": 46,
+      "source_id": "employment",
+      "verification_status": "verified_metadata"
+    },
+    {
+      "count": 46,
+      "source_id": "unemployment",
+      "verification_status": "pending_age"
+    }
+  ]
+}

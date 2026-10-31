@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-10-30T21:00:59.336Z",
+  "project_ref": "jlnebtxrncfqzyjgasuw",
+  "counts": {
+    "jobs": 10748,
+    "data_imports": 7,
+    "data_sources": 7,
+    "occupation_mappings": 323,
+    "district_youth_stats": 275,
+    "youth_employment_stats": 184,
+    "occupation_market_stats": 92
+  },
+  "rls_disabled": 0,
+  "public_writes": 0,
+  "related_edges": 0,
+  "employment_versions": [
+    {
+      "count": 92,
+      "source_id": "capital-employment-20261031-v1"
+    },
+    {
+      "count": 46,
+      "source_id": "employment"
+    }
+  ]
+}

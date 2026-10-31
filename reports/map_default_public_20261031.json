@@ -1,0 +1,47 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "verified_at": "2026-10-30T21:21:20.660Z",
+  "checks": [
+    {
+      "profile": "desktop",
+      "test": "default opens Seoul map and heatmap",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "test": "capital switch",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "test": "explicit capital selection persists",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "test": "explicit map link",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "test": "default opens Seoul map and heatmap",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "test": "capital switch",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "test": "explicit capital selection persists",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "test": "explicit map link",
+      "passed": true
+    }
+  ],
+  "passed": 8
+}

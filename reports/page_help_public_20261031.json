@@ -1,0 +1,91 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "checked_at": "2026-10-31T00:35:24.945Z",
+  "checks": [
+    {
+      "profile": "desktop",
+      "page": "home",
+      "help_visible": true,
+      "copy": "서울과 전국의 고용률 수준과 변화를 비교해, 현재 고용 상황을 이해하는 데 참고하세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "visualizations",
+      "help_visible": true,
+      "copy": "지도와 그래프로 지역별 고용 수준과 변화를 비교해, 관심 지역의 상황을 살펴보세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "districts",
+      "help_visible": true,
+      "copy": "구별 고용 흐름을 살펴보고, 관심 있는 구의 근무지 공고로 탐색을 이어가세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "occupations",
+      "help_visible": true,
+      "copy": "직종별 구인·구직 등록 규모를 비교해, 살펴볼 직종을 정하는 데 참고하세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "jobs",
+      "help_visible": true,
+      "copy": "지역·직종으로 공고를 좁혀, 관심 있는 일자리의 근무조건을 비교해 보세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "recommendations",
+      "help_visible": true,
+      "copy": "필수조건 충족 여부와 선호 일치 이유를 확인하며 공고를 비교해 보세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "home",
+      "help_visible": true,
+      "copy": "서울과 전국의 고용률 수준과 변화를 비교해, 현재 고용 상황을 이해하는 데 참고하세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "visualizations",
+      "help_visible": true,
+      "copy": "지도와 그래프로 지역별 고용 수준과 변화를 비교해, 관심 지역의 상황을 살펴보세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "districts",
+      "help_visible": true,
+      "copy": "구별 고용 흐름을 살펴보고, 관심 있는 구의 근무지 공고로 탐색을 이어가세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "occupations",
+      "help_visible": true,
+      "copy": "직종별 구인·구직 등록 규모를 비교해, 살펴볼 직종을 정하는 데 참고하세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "jobs",
+      "help_visible": true,
+      "copy": "지역·직종으로 공고를 좁혀, 관심 있는 일자리의 근무조건을 비교해 보세요.",
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "recommendations",
+      "help_visible": true,
+      "copy": "필수조건 충족 여부와 선호 일치 이유를 확인하며 공고를 비교해 보세요.",
+      "no_overflow": true
+    }
+  ],
+  "errors": []
+}

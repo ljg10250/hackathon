@@ -1,0 +1,162 @@
+{
+  "as_of": "2026-10-31",
+  "raw_hashes": {
+    "district_youth_employment_halfyear.csv": "322a96f5331361f381afd2dedddf34655aad5d473972e4f2be8fd1fd41a8a869",
+    "job_field_profile.csv": "7e978f787d9dc2a2306942b2880c3a3b867d2d9d72fdbc9ae7e3064367d086b2",
+    "occupation_market_seoul_202609.csv": "ac4e51921a068da00239373dfa74f26152b0177662ba50f85b83c4ed7b7a34f2",
+    "seoul_jobs_stage1.csv": "d9b71a0aec0714341dad7b8e429beec7a7141576529c026d0bf7b03352352f67",
+    "youth_employment_quarterly.csv": "5885c8675a6eb778c38f26ba62fefa3629c7420b3b99b7bf28568c5fe647eb35",
+    "youth_unemployment_quarterly.csv": "862fe0e22fa89136b50a2d8b0fe4db0e9dc688d58e936792623f9c6cf6a71ac7",
+    "구인구직통계(202609).xlsx": "95259de73ed373a0e8ce910772200d1a6ca63bf93b527f30444c86f386b34e01",
+    "서울시 일자리포털 채용정보.csv": "79645c5c27f0bec98fb5b29aa47936d6b1a83bedce840dee715f7accff2a8cd6",
+    "청년고용률_시_군_구__20261030165046.csv": "ef6bf103303bb6f49881c0b5c8b154818f1c2be24aa54374a2ddb0b1a9518dd6",
+    "청년고용률_시도__20261030165319.csv": "3cb0f71191aecda8cf49ab1fe1a519fd1263eae93f7243c340f8855b11bbaf94",
+    "청년실업률_시도__20261030165532.csv": "966ef2ac22f43bdb4d1fe057fde005aa42f58608dfd8b6d33eafdc42aa224ad1"
+  },
+  "stage1_hashes": {
+    "district_youth_employment_halfyear.csv": "322a96f5331361f381afd2dedddf34655aad5d473972e4f2be8fd1fd41a8a869",
+    "job_field_profile.csv": "7e978f787d9dc2a2306942b2880c3a3b867d2d9d72fdbc9ae7e3064367d086b2",
+    "occupation_market_seoul_202609.csv": "ac4e51921a068da00239373dfa74f26152b0177662ba50f85b83c4ed7b7a34f2",
+    "seoul_jobs_stage1.csv": "d9b71a0aec0714341dad7b8e429beec7a7141576529c026d0bf7b03352352f67",
+    "stage1_data_summary.json": "2f7b3dce08b2a4b1fa02ffbab5e61083e53139edf06d2a5ef6cc2f3cf53fc30f",
+    "youth_employment_quarterly.csv": "5885c8675a6eb778c38f26ba62fefa3629c7420b3b99b7bf28568c5fe647eb35",
+    "youth_unemployment_quarterly.csv": "862fe0e22fa89136b50a2d8b0fe4db0e9dc688d58e936792623f9c6cf6a71ac7"
+  },
+  "raw_rows": 42663,
+  "seoul_rows": 10748,
+  "encoding_quarantine": [
+    {
+      "source_row": 596,
+      "affected_fields": [
+        "직무내용"
+      ]
+    },
+    {
+      "source_row": 6852,
+      "affected_fields": [
+        "직무내용"
+      ]
+    },
+    {
+      "source_row": 17252,
+      "affected_fields": [
+        "직무내용",
+        "근무시간/형태"
+      ]
+    },
+    {
+      "source_row": 21223,
+      "affected_fields": [
+        "직무내용"
+      ]
+    },
+    {
+      "source_row": 34434,
+      "affected_fields": [
+        "직무내용"
+      ]
+    }
+  ],
+  "encoding_replacement_count": 6,
+  "national_decode_error_count": 22,
+  "encoding_alternatives": {
+    "cp949": 22,
+    "euc_kr": 114,
+    "utf-8": 19565882
+  },
+  "table_counts": {
+    "data_sources": 6,
+    "jobs": 10748,
+    "youth_employment_stats": 92,
+    "district_youth_stats": 275,
+    "occupation_market_stats": 92,
+    "occupation_mappings": 323,
+    "data_imports": 6
+  },
+  "workdays_unknown": 631,
+  "wage_parsed": 10748,
+  "wage_conversion_verified": 0,
+  "mapping_verified": 323,
+  "batches": [
+    "000-data_sources.sql",
+    "001-jobs.sql",
+    "002-jobs.sql",
+    "003-jobs.sql",
+    "004-jobs.sql",
+    "005-jobs.sql",
+    "006-jobs.sql",
+    "007-jobs.sql",
+    "008-jobs.sql",
+    "009-jobs.sql",
+    "010-jobs.sql",
+    "011-jobs.sql",
+    "012-jobs.sql",
+    "013-jobs.sql",
+    "014-jobs.sql",
+    "015-jobs.sql",
+    "016-jobs.sql",
+    "017-jobs.sql",
+    "018-jobs.sql",
+    "019-jobs.sql",
+    "020-jobs.sql",
+    "021-jobs.sql",
+    "022-jobs.sql",
+    "023-jobs.sql",
+    "024-jobs.sql",
+    "025-jobs.sql",
+    "026-jobs.sql",
+    "027-jobs.sql",
+    "028-jobs.sql",
+    "029-jobs.sql",
+    "030-jobs.sql",
+    "031-jobs.sql",
+    "032-jobs.sql",
+    "033-jobs.sql",
+    "034-jobs.sql",
+    "035-jobs.sql",
+    "036-jobs.sql",
+    "037-jobs.sql",
+    "038-jobs.sql",
+    "039-jobs.sql",
+    "040-jobs.sql",
+    "041-jobs.sql",
+    "042-jobs.sql",
+    "043-jobs.sql",
+    "044-jobs.sql",
+    "045-jobs.sql",
+    "046-jobs.sql",
+    "047-jobs.sql",
+    "048-jobs.sql",
+    "049-jobs.sql",
+    "050-jobs.sql",
+    "051-jobs.sql",
+    "052-jobs.sql",
+    "053-jobs.sql",
+    "054-jobs.sql",
+    "055-jobs.sql",
+    "056-jobs.sql",
+    "057-jobs.sql",
+    "058-jobs.sql",
+    "059-jobs.sql",
+    "060-jobs.sql",
+    "061-jobs.sql",
+    "062-jobs.sql",
+    "063-jobs.sql",
+    "064-jobs.sql",
+    "065-jobs.sql",
+    "066-jobs.sql",
+    "067-jobs.sql",
+    "068-jobs.sql",
+    "069-jobs.sql",
+    "070-jobs.sql",
+    "071-jobs.sql",
+    "072-jobs.sql",
+    "073-youth_employment_stats.sql",
+    "074-district_youth_stats.sql",
+    "075-district_youth_stats.sql",
+    "076-occupation_market_stats.sql",
+    "077-data_imports.sql"
+  ],
+  "mapping_verified_job_rows": 7897,
+  "mapping_report": "occupation_mapping_validation.json"
+}

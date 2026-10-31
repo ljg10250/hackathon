@@ -1,0 +1,139 @@
+{
+  "base": "http://127.0.0.1:8787",
+  "checked_at": "2026-10-30T23:22:18.477Z",
+  "checks": [
+    {
+      "profile": "desktop",
+      "page": "home",
+      "min": 25,
+      "max": 75,
+      "observations": 46,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "desktop",
+      "page": "map",
+      "min": 25,
+      "max": 75,
+      "observations": 11,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "desktop",
+      "page": "capital",
+      "min": 25,
+      "max": 75,
+      "observations": 92,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "desktop",
+      "page": "districts",
+      "min": 25,
+      "max": 75,
+      "observations": 11,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "mobile",
+      "page": "home",
+      "min": 25,
+      "max": 75,
+      "observations": 46,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "mobile",
+      "page": "map",
+      "min": 25,
+      "max": 75,
+      "observations": 11,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "mobile",
+      "page": "capital",
+      "min": 25,
+      "max": 75,
+      "observations": 92,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "mobile",
+      "page": "districts",
+      "min": 25,
+      "max": 75,
+      "observations": 11,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "narrow",
+      "page": "home",
+      "min": 25,
+      "max": 75,
+      "observations": 46,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "narrow",
+      "page": "map",
+      "min": 25,
+      "max": 75,
+      "observations": 11,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "narrow",
+      "page": "capital",
+      "min": 25,
+      "max": 75,
+      "observations": 92,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "narrow",
+      "page": "districts",
+      "min": 25,
+      "max": 75,
+      "observations": 11,
+      "coordinates_verified": true,
+      "bar_and_map_preserved": true,
+      "no_extra_notice": true,
+      "axe_violations": 0
+    }
+  ],
+  "errors": []
+}

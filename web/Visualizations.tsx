@@ -1,0 +1,53 @@
+import React,{useEffect,useState} from 'react';
+import {useData,Loading,Sources,Table,periodLabel,type Payload,type Row} from './shared';
+import {BarChart,LineChart,MultiLineChart} from './charts';
+import {changeSentence,difference,districtInsight} from './insights';
+import {seoulMapData} from './seoulMapData';
+import {boundaryMetadata} from '../worker/boundaryMetadata';
+
+type Datum={region:string;period:string;value:number|null};
+export const rateColor=(value:number|null)=>value===null?'#e5e7eb':value<30?'#e8f1fb':value<40?'#c5dcf4':value<50?'#8db8e7':value<60?'#3676c5':'#174e8c';
+const foreground=(value:number|null)=>value!==null&&value>=50?'#ffffff':'#152c45';
+const short=(s:string)=>s.replace(/^서울 /,'').replace('서울특별시','서울').replace('인천광역시','인천').replace('경기도','경기');
+const regions=['서울특별시','경기도','인천광역시','전국'];
+const colors=['#3676C5','#7650A1','#99641B','#0D9488'];
+const valueAt=(rows:Datum[],region:string,period:string)=>rows.find(r=>r.region===region&&r.period===period)?.value??null;
+const asData=(payload:Payload):Datum[]=>(payload.data as Row[]).map(r=>({region:String(r.region),period:String(r.period),value:typeof r.value==='number'?r.value:null}));
+const previous=(period:string)=>String(Number(period.slice(0,4))-1)+period.slice(4);
+const signed=(n:number|null)=>n===null?'미확인':(n>0?'+':'')+n.toFixed(1)+'%p';
+
+export function CapitalVisual({payload,quarter,region,onQuarter,onRegion}:{payload:Payload;quarter:string;region:string;onQuarter:(p:string)=>void;onRegion:(r:string)=>void}){
+ const rows=asData(payload),periods=[...new Set(rows.map(r=>r.period))].sort();
+ const current=valueAt(rows,region,quarter),national=valueAt(rows,'전국',quarter),gap=difference(current,national),yoy=difference(current,valueAt(rows,region,previous(quarter)));
+ const series=regions.map((name,i)=>({label:short(name),color:colors[i],dashed:name==='전국',points:periods.map(period=>({period,value:valueAt(rows,name,period)}))}));
+ return <><section id="capital-visual"><div className="section-heading"><div><h2>수도권, 같은 분기로 비교</h2><p>15~29세 · 거주지 기준 · 분기 · 전국은 서울 포함</p></div><div className="viz-controls"><label>기준 분기<select value={quarter} onChange={e=>onQuarter(e.target.value)}>{[...periods].reverse().map(p=><option key={p} value={p}>{periodLabel(p)}</option>)}</select></label><label>관심 시도<select value={region} onChange={e=>onRegion(e.target.value)}>{regions.slice(0,3).map(r=><option key={r} value={r}>{short(r)}</option>)}</select></label></div></div>
+ <BarChart title={periodLabel(quarter)+' · 청년 고용률'} unit="%" fixedMax={100} rows={regions.map(r=>({label:short(r)+(r==='전국'?' (비교 기준)':''),value:valueAt(rows,r,quarter),href:r==='전국'?undefined:'/visualizations?'+new URLSearchParams({area:'capital',quarter,region:r})}))}/>
+ <div className="insight" aria-live="polite"><h3>비교해서 알 수 있는 것</h3><p>{short(region)} 고용률은 {current===null?'미확인':current.toFixed(1)+'%'}로, {gap===null?'전국과의 차이는 미확인입니다.':gap===0?'전국과 같습니다.':`전국보다 ${Math.abs(gap).toFixed(1)}%p ${gap>0?'높습니다':'낮습니다'}.`} {changeSentence(short(region),yoy)}</p><p>지역 간 현재 수준과 같은 지역의 변화를 함께 살펴보세요. 거주자의 고용 상황이며 해당 지역 근무지의 채용 규모나 개인의 취업 가능성을 뜻하지 않습니다.</p></div>
+ <MultiLineChart title="수도권·전국 청년 고용률 추이" series={series} frequency="분기" focus={short(region)}/>
+ <details className="data-disclosure"><summary>수도권 비교 수치표</summary><Table caption="같은 분기·15~29세 고용률 (%)" rows={periods.map(period=>({period,...Object.fromEntries(regions.map(r=>[r,valueAt(rows,r,period)?.toFixed(1)??null]))}))} columns={[["period","분기"],...regions.map(r=>[r,short(r)+' (%)'] as [string,string])]}/></details>
+ <p className="subtle">실업률과 취업률은 별도 지표입니다. 현재 화면은 원 표·연령·단위를 검증한 고용률을 보여줍니다.</p></section><Sources sources={payload.sources} ids={['capital-employment-20261031-v1']}/></>;
+}
+
+function RateLegend(){return <div className="map-legend" aria-label="고용률 색 범례 · 모든 반기에 동일"><span>색 범례 (%)</span>{[[0,'30 미만'],[30,'30~40 미만'],[40,'40~50 미만'],[50,'50~60 미만'],[60,'60 이상']].map(([v,label])=><span key={String(v)}><i style={{background:rateColor(Number(v))}} aria-hidden="true"/>{label}</span>)}<span><i style={{background:rateColor(null)}} aria-hidden="true"/>미확인</span></div>;}
+export function DistrictVisual({payload,half,district,onHalf,onDistrict}:{payload:Payload;half:string;district:string;onHalf:(p:string)=>void;onDistrict:(r:string)=>void}){
+ const [zoomed,setZoomed]=useState(false);
+ const rows=asData(payload),periods=[...new Set(rows.map(r=>r.period))].sort(),names=[...new Set(rows.map(r=>r.region))].sort((a,b)=>a.localeCompare(b,'ko'));
+ const name='서울 '+district,selected=valueAt(rows,name,half),delta=difference(selected,valueAt(rows,name,previous(half)));
+ function choose(name:string){onDistrict(short(name));}
+ return <><section id="seoul-map"><div className="section-heading"><div><h2>서울 25개 구, 어디가 어떻게 다를까?</h2><p>15~29세 주민의 고용률 · {periodLabel(half)} · 반기</p></div><div className="viz-controls"><label>기준 반기<select value={half} onChange={e=>onHalf(e.target.value)}>{[...periods].reverse().map(p=><option key={p} value={p}>{periodLabel(p)}</option>)}</select></label><label>지도 자치구 선택<select value={district} onChange={e=>onDistrict(e.target.value)}>{names.map(n=><option key={n} value={short(n)}>{short(n)}</option>)}</select></label></div></div>
+ <div className="map-layout"><figure className="district-map"><figcaption id="map-title">서울 자치구 청년 고용률 지도</figcaption><p id="map-help" className="subtle">구를 누르거나 키보드로 선택하세요. 진한 색일수록 고용률 값이 높습니다. 작은 화면에서는 확대해 지역명을 볼 수 있습니다.</p><button className="map-zoom" aria-pressed={zoomed} onClick={()=>setZoomed(!zoomed)}>{zoomed?'전체 지도':'지도 확대'}</button><div className="map-canvas" role="region" tabIndex={0} aria-label="서울 지도 가로·세로 스크롤"><svg style={{minWidth:zoomed?720:undefined}} viewBox="0 0 860 720" role="group" aria-labelledby="map-title" aria-describedby="map-help">{seoulMapData.map(g=>{const value=valueAt(rows,'서울 '+g.name,half),active=g.name===district;return <g key={g.code} role="button" tabIndex={0} aria-label={g.name+' · 고용률 '+(value===null?'미확인':value.toFixed(1)+'%')} aria-pressed={active} onClick={()=>onDistrict(g.name)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onDistrict(g.name);}}}><path d={g.path} fill={rateColor(value)} className={active?'map-area selected':'map-area'}/><text x={g.x} y={g.y} textAnchor="middle" dominantBaseline="central" fill={foreground(value)} className="map-label">{g.name}</text></g>;})}</svg></div><RateLegend/><p className="subtle">{boundaryMetadata.period} 경계를 모든 반기에 공통 사용합니다. 통계는 각 반기 값이며 경계 기준연도와 구분합니다. 지도의 면적은 고용 규모를 뜻하지 않습니다.</p></figure>
+ <article className="map-detail" aria-live="polite"><span className="tag">선택한 자치구</span><h3>{district} · {periodLabel(half)}</h3><p className="viz-big-number">{selected===null?'미확인':selected.toFixed(1)+'%'}</p><p>전년 같은 반기 대비 <strong>{signed(delta)}</strong></p><div className="insight"><h3>이 수치가 말하는 것</h3><p>{districtInsight(name,half,rows)}</p></div><a className="button" href={'/jobs?'+new URLSearchParams({district})}>이 구의 근무지 공고 탐색 →</a><p className="subtle">공고는 수집 시점의 근무지 정보입니다. 주민 고용률과 현재 모집 중인 공고 수는 다른 정보입니다.</p></article></div>
+ <LineChart title={district+' 청년 고용률 · 반기 추이'} points={periods.map(period=>({period,value:valueAt(rows,name,period)}))} frequency="반기"/>
+ <details className="data-disclosure"><summary>선택한 구의 고용률·변화 수치표</summary><Table caption={district+' · 반기 고용률과 전년 동기 차이'} rows={periods.map(period=>({period,value:valueAt(rows,name,period),change:signed(difference(valueAt(rows,name,period),valueAt(rows,name,previous(period))))}))} columns={[["period","반기"],["value","고용률 (%)"],["change","전년 동기 (%p)"]]}/></details></section>
+ <section id="district-heatmap"><h2>25개 구의 변화를 한 번에</h2><p>각 칸은 해당 구·반기의 고용률입니다. 같은 색 범례를 사용하므로 기간을 바꿔도 색의 의미가 같습니다. 구 이름이나 반기 제목을 누르면 지도와 상세 설명이 함께 바뀝니다. 표를 가로·세로로 움직여 모든 구와 기간을 볼 수 있습니다.</p><RateLegend/><div className="table-scroll heatmap-scroll" role="region" tabIndex={0} aria-label="자치구별 11개 반기 고용률 색상표 가로·세로 스크롤"><table className="heatmap"><caption>서울25구 × 11개 반기 · 15~29세 고용률 (%)</caption><thead><tr><th scope="col">자치구</th>{periods.map(p=><th scope="col" key={p}><button aria-pressed={p===half} onClick={()=>onHalf(p)} aria-label={periodLabel(p)+' 지도에 표시'}>{periodLabel(p)}</button></th>)}</tr></thead><tbody>{names.map(n=><tr key={n}><th scope="row"><button aria-pressed={n===name} onClick={()=>choose(n)}>{short(n)}</button></th>{periods.map(p=>{const v=valueAt(rows,n,p);return <td key={p} style={{background:rateColor(v),color:foreground(v)}} className={n===name&&p===half?'active-cell':''}>{v===null?'미확인':v.toFixed(1)}</td>;})}</tr>)}</tbody></table></div><p className="subtle">고용률만으로 지역의 우열·원인·개인의 취업 가능성을 판단하지 않습니다. 표본오차와 통계적 유의성은 계산하지 않았습니다.</p></section>
+ <Sources sources={[...payload.sources.filter(s=>s.id!==boundaryMetadata.id),boundaryMetadata]} ids={['districts',boundaryMetadata.id]}/></>;
+}
+
+export default function Visualizations(){
+ const p=new URLSearchParams(location.search),[area,setArea]=useState(p.get('area')==='capital'?'capital':'districts'),[quarter,setQuarter]=useState(/^202[1-6]-Q[1-4]$/.test(p.get('quarter')??'')&&p.get('quarter')!<='2026-Q3'?p.get('quarter')!:'2026-Q3'),[half,setHalf]=useState(/^202[1-6]-H[12]$/.test(p.get('half')??'')&&p.get('half')!<='2026-H1'?p.get('half')!:'2026-H1'),[region,setRegion]=useState(regions.slice(0,3).includes(p.get('region')??'')?p.get('region')!:'서울특별시'),[district,setDistrict]=useState(seoulMapData.some(g=>g.name===p.get('district'))?p.get('district')!:'강남구');
+ const capital=useData('/api/visualizations?area=capital'),districts=useData('/api/visualizations?area=districts'),active=area==='capital'?capital:districts;
+ useEffect(()=>{history.replaceState(null,'','/visualizations?'+new URLSearchParams({area,quarter,half,region,district}));},[area,quarter,half,region,district]);
+ const q=/^202[1-6]-Q[1-4]$/.test(quarter)&&quarter<='2026-Q3'?quarter:'2026-Q3',h=/^202[1-6]-H[12]$/.test(half)&&half<='2026-H1'?half:'2026-H1';
+ return <><div className="eyebrow">EXPLORE THE DATA</div><h1>비교하면 보이는<br/>우리 지역의 고용 흐름.</h1><p className="intro">지도와 그래프로 지역별 고용 수준과 변화를 비교해, 관심 지역의 상황을 살펴보세요.</p><div className="viz-tabs" role="group" aria-label="시각화 범위"><button aria-pressed={area==='districts'} onClick={()=>setArea('districts')}>서울 지도·변화표</button><button aria-pressed={area==='capital'} onClick={()=>setArea('capital')}>수도권 비교</button></div>
+ {!active.data?<Loading error={active.error}/>:!active.data.visualization_enabled?<div className="notice" role="status">자료 재검증 전 시각화를 보류합니다. 원 표와의 일치를 확인한 뒤 제공합니다.</div>:area==='capital'?<CapitalVisual payload={active.data} quarter={q} region={region} onQuarter={setQuarter} onRegion={setRegion}/>:<DistrictVisual payload={active.data} half={h} district={district} onHalf={setHalf} onDistrict={setDistrict}/>}</>;
+}

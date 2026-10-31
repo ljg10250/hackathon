@@ -1,0 +1,8 @@
+import React,{useEffect,useId,useState} from 'react';
+type Option={code:string;name:string};
+type OptionsResult={data:Option[];total:number;error?:string};
+export default function OccupationPicker({defaultValue='',label='직종',name='occupation'}:{defaultValue?:string;label?:string;name?:string}){
+ const id=useId(),[query,setQuery]=useState(defaultValue),[selected,setSelected]=useState(defaultValue),[options,setOptions]=useState<Option[]>([]),[total,setTotal]=useState(0),[error,setError]=useState('');
+ useEffect(()=>{const c=new AbortController();const timer=setTimeout(()=>{setError('');fetch('/api/job-occupations?'+new URLSearchParams({q:query,limit:'50'}),{signal:c.signal}).then(async r=>{const body=await r.json() as OptionsResult;if(!r.ok)throw new Error(body.error??'직종 목록 조회 실패');setOptions(body.data);setTotal(body.total);}).catch(e=>{if(e.name!=='AbortError')setError(e.message);});},200);return()=>{clearTimeout(timer);c.abort();};},[query]);
+ return <div className="occupation-picker"><label htmlFor={id+'-search'}>{label} 찾기<input id={id+'-search'} type="search" value={query} maxLength={80} onChange={e=>setQuery(e.target.value)} placeholder="예: 사무원 · 직종명 또는 코드" aria-describedby={id+'-hint'}/></label><label htmlFor={id+'-select'}>{label} 선택<select id={id+'-select'} name={name} value={selected} onChange={e=>setSelected(e.target.value)}><option value="">선택 없음</option>{selected&&!options.some(o=>o.code===selected)&&<option value={selected}>선택 유지 · {selected}</option>}{options.map(o=><option key={o.code+'|'+o.name} value={o.code}>{o.name} · {o.code}</option>)}</select></label><small id={id+'-hint'}>{error?<span role="alert">{error}</span>:<>공고에 기재된 직종명 · {total}개 중 최대 50개 표시. 찾기 입력 후 목록에서 선택하세요.</>}</small></div>;
+}

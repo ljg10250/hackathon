@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-10-30T20:02:51.610Z",
+  "checks": [
+    {
+      "path": "jobs?select=id&source_row=eq.596",
+      "status": 200,
+      "rows": 0
+    },
+    {
+      "path": "jobs?select=id&quality_status=eq.quarantined",
+      "status": 200,
+      "rows": 0
+    },
+    {
+      "path": "youth_employment_stats?select=value&metric=eq.unemployment_rate",
+      "status": 200,
+      "rows": 0
+    },
+    {
+      "path": "youth_employment_stats?select=value&metric=eq.employment_rate",
+      "status": 200,
+      "rows": 46
+    },
+    {
+      "path": "data_imports",
+      "status": 401
+    },
+    {
+      "path": "data_sources POST",
+      "status": 401
+    }
+  ]
+}

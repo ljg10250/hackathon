@@ -1,0 +1,308 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "verified_at": "2026-10-30T21:12:12.609Z",
+  "checks": [
+    {
+      "profile": "desktop",
+      "district": "종로구",
+      "hit": "종로구 · 고용률 29.5%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "중구",
+      "hit": "중구 · 고용률 38.1%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "용산구",
+      "hit": "용산구 · 고용률 44.9%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "성동구",
+      "hit": "성동구 · 고용률 42.8%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "광진구",
+      "hit": "광진구 · 고용률 45.5%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "동대문구",
+      "hit": "동대문구 · 고용률 36.8%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "중랑구",
+      "hit": "중랑구 · 고용률 47.3%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "성북구",
+      "hit": "성북구 · 고용률 39.7%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "강북구",
+      "hit": "강북구 · 고용률 41.1%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "도봉구",
+      "hit": "도봉구 · 고용률 42.5%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "노원구",
+      "hit": "노원구 · 고용률 33.9%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "은평구",
+      "hit": "은평구 · 고용률 42.7%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "서대문구",
+      "hit": "서대문구 · 고용률 38.2%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "마포구",
+      "hit": "마포구 · 고용률 44.3%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "양천구",
+      "hit": "양천구 · 고용률 40.9%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "강서구",
+      "hit": "강서구 · 고용률 50.9%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "구로구",
+      "hit": "구로구 · 고용률 52.5%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "금천구",
+      "hit": "금천구 · 고용률 57.5%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "영등포구",
+      "hit": "영등포구 · 고용률 55.4%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "동작구",
+      "hit": "동작구 · 고용률 51.3%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "관악구",
+      "hit": "관악구 · 고용률 53.9%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "서초구",
+      "hit": "서초구 · 고용률 34.1%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "강남구",
+      "hit": "강남구 · 고용률 33.0%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "송파구",
+      "hit": "송파구 · 고용률 43.4%",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "district": "강동구",
+      "hit": "강동구 · 고용률 37.0%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "종로구",
+      "hit": "종로구 · 고용률 29.5%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "중구",
+      "hit": "중구 · 고용률 38.1%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "용산구",
+      "hit": "용산구 · 고용률 44.9%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "성동구",
+      "hit": "성동구 · 고용률 42.8%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "광진구",
+      "hit": "광진구 · 고용률 45.5%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "동대문구",
+      "hit": "동대문구 · 고용률 36.8%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "중랑구",
+      "hit": "중랑구 · 고용률 47.3%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "성북구",
+      "hit": "성북구 · 고용률 39.7%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "강북구",
+      "hit": "강북구 · 고용률 41.1%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "도봉구",
+      "hit": "도봉구 · 고용률 42.5%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "노원구",
+      "hit": "노원구 · 고용률 33.9%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "은평구",
+      "hit": "은평구 · 고용률 42.7%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "서대문구",
+      "hit": "서대문구 · 고용률 38.2%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "마포구",
+      "hit": "마포구 · 고용률 44.3%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "양천구",
+      "hit": "양천구 · 고용률 40.9%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "강서구",
+      "hit": "강서구 · 고용률 50.9%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "구로구",
+      "hit": "구로구 · 고용률 52.5%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "금천구",
+      "hit": "금천구 · 고용률 57.5%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "영등포구",
+      "hit": "영등포구 · 고용률 55.4%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "동작구",
+      "hit": "동작구 · 고용률 51.3%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "관악구",
+      "hit": "관악구 · 고용률 53.9%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "서초구",
+      "hit": "서초구 · 고용률 34.1%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "강남구",
+      "hit": "강남구 · 고용률 33.0%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "송파구",
+      "hit": "송파구 · 고용률 43.4%",
+      "passed": true
+    },
+    {
+      "profile": "mobile",
+      "district": "강동구",
+      "hit": "강동구 · 고용률 37.0%",
+      "passed": true
+    }
+  ],
+  "passed": 50,
+  "scope": "25 label hit targets in desktop mouse and mobile touch contexts; map zoom screenshots"
+}

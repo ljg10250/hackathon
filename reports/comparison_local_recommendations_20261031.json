@@ -1,0 +1,235 @@
+{
+  "base": "http://127.0.0.1:8787",
+  "verified_at": "2026-10-30T20:03:37.803Z",
+  "weights": {
+    "occupation": 35,
+    "district": 25,
+    "wage": 20,
+    "workdays": 10,
+    "employment_type": 10
+  },
+  "checks": [
+    {
+      "name": "no preferences",
+      "total": 10743,
+      "counts": {
+        "eligible": 10743,
+        "needs_review": 0
+      },
+      "rows": 20,
+      "elapsed_ms": 1150
+    },
+    {
+      "name": "occupation only",
+      "total": 10743,
+      "counts": {
+        "eligible": 10743,
+        "needs_review": 0
+      },
+      "rows": 20,
+      "elapsed_ms": 1303
+    },
+    {
+      "name": "all five weights",
+      "total": 10743,
+      "counts": {
+        "eligible": 10743,
+        "needs_review": 0
+      },
+      "rows": 20,
+      "elapsed_ms": 2112
+    },
+    {
+      "name": "missing workdays eligible",
+      "total": 7072,
+      "counts": {
+        "eligible": 7072,
+        "needs_review": 626
+      },
+      "rows": 20,
+      "elapsed_ms": 1502
+    },
+    {
+      "name": "missing workdays separate",
+      "total": 626,
+      "counts": {
+        "eligible": 7072,
+        "needs_review": 626
+      },
+      "rows": 20,
+      "elapsed_ms": 2033
+    },
+    {
+      "name": "wage range required",
+      "total": 429,
+      "counts": {
+        "eligible": 429,
+        "needs_review": 7902
+      },
+      "rows": 20,
+      "elapsed_ms": 1613
+    },
+    {
+      "name": "wage unit/range unknown separate",
+      "total": 7902,
+      "counts": {
+        "eligible": 429,
+        "needs_review": 7902
+      },
+      "rows": 20,
+      "elapsed_ms": 1610
+    },
+    {
+      "name": "combined required filters",
+      "total": 3,
+      "counts": {
+        "eligible": 3,
+        "needs_review": 0
+      },
+      "rows": 3,
+      "elapsed_ms": 2152
+    },
+    {
+      "name": "region alternative exact occupation",
+      "total": 99,
+      "counts": {
+        "eligible": 99,
+        "needs_review": 0
+      },
+      "rows": 20,
+      "elapsed_ms": 187
+    },
+    {
+      "name": "region cannot relax required district",
+      "total": 0,
+      "counts": {
+        "eligible": 0,
+        "needs_review": 0
+      },
+      "rows": 0,
+      "elapsed_ms": 211
+    },
+    {
+      "name": "region cannot relax required occupation",
+      "total": 0,
+      "counts": {
+        "eligible": 0,
+        "needs_review": 0
+      },
+      "rows": 0,
+      "elapsed_ms": 198
+    },
+    {
+      "name": "related zero remains empty",
+      "total": 0,
+      "counts": {
+        "eligible": 0,
+        "needs_review": 0
+      },
+      "rows": 0,
+      "elapsed_ms": 204
+    },
+    {
+      "name": "alternative missing preference remains empty",
+      "total": 0,
+      "counts": {
+        "eligible": 0,
+        "needs_review": 0
+      },
+      "rows": 0,
+      "elapsed_ms": 198
+    },
+    {
+      "name": "second page after global sorting",
+      "total": 10743,
+      "counts": {
+        "eligible": 10743,
+        "needs_review": 0
+      },
+      "rows": 20,
+      "elapsed_ms": 1528
+    },
+    {
+      "name": "beyond last page keeps total",
+      "total": 10743,
+      "counts": {
+        "eligible": 10743,
+        "needs_review": 0
+      },
+      "rows": 0,
+      "elapsed_ms": 1002
+    },
+    {
+      "name": "DB fixture: exact occupation"
+    },
+    {
+      "name": "DB fixture: synthetic verified related calculation"
+    },
+    {
+      "name": "DB fixture: related never bypasses required"
+    },
+    {
+      "name": "DB fixture: unknown upper cap"
+    },
+    {
+      "name": "DB fixture: zero is not missing"
+    },
+    {
+      "name": "DB fixture: unrounded score retained"
+    },
+    {
+      "name": "direct RPC validation",
+      "body": {
+        "page_size": 51
+      }
+    },
+    {
+      "name": "direct RPC validation",
+      "body": {
+        "required": null
+      }
+    },
+    {
+      "name": "direct RPC validation",
+      "body": {
+        "preferred": {
+          "workdays": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "direct RPC validation",
+      "body": {
+        "preferred": {
+          "experience": [
+            "신입"
+          ]
+        }
+      }
+    },
+    {
+      "name": "direct RPC validation",
+      "body": {
+        "required": {
+          "district": [
+            "부산"
+          ]
+        }
+      }
+    },
+    {
+      "name": "direct RPC validation",
+      "body": {
+        "preferred": {
+          "occupation": [
+            "123456",
+            "123456"
+          ]
+        }
+      }
+    }
+  ],
+  "passed": 27
+}

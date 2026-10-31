@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-30T16:57:45.090565+00:00",
+  "checks": {
+    "youth_employment_quarterly.csv": {
+      "matched_cells": 46,
+      "source_file": "청년고용률_시도__20261030165319.csv"
+    },
+    "youth_unemployment_quarterly.csv": {
+      "matched_cells": 46,
+      "source_file": "청년실업률_시도__20261030165532.csv"
+    },
+    "district_youth_employment_halfyear.csv": {
+      "matched_cells": 275,
+      "source_file": "청년고용률_시_군_구__20261030165046.csv"
+    },
+    "jobs": {
+      "matched_rows": 10748,
+      "matched_fields_per_row": 9
+    }
+  }
+}

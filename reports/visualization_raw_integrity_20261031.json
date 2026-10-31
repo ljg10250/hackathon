@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-30T21:13:22.191130+00:00",
+  "checks": [
+    {
+      "file": "청년고용률_시_군_구__20261030165046.csv",
+      "sha256": "ef6bf103303bb6f49881c0b5c8b154818f1c2be24aa54374a2ddb0b1a9518dd6",
+      "matched": true
+    },
+    {
+      "file": "청년고용률_시도__20261030165319.csv",
+      "sha256": "3cb0f71191aecda8cf49ab1fe1a519fd1263eae93f7243c340f8855b11bbaf94",
+      "matched": true
+    },
+    {
+      "file": "청년실업률_시도__20261030165532.csv",
+      "sha256": "966ef2ac22f43bdb4d1fe057fde005aa42f58608dfd8b6d33eafdc42aa224ad1",
+      "matched": true
+    },
+    {
+      "file": "서울시 일자리포털 채용정보.csv",
+      "sha256": "79645c5c27f0bec98fb5b29aa47936d6b1a83bedce840dee715f7accff2a8cd6",
+      "matched": true
+    },
+    {
+      "file": "구인구직통계(202609).xlsx",
+      "sha256": "95259de73ed373a0e8ce910772200d1a6ca63bf93b527f30444c86f386b34e01",
+      "matched": true
+    }
+  ],
+  "passed": true
+}

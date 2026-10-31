@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-30T17:57:34.760Z",
+  "checks": [
+    {
+      "search": "?mode=recommend",
+      "passed": true
+    },
+    {
+      "search": "?mode=recommend&district=%EA%B0%95%EB%82%A8%EA%B5%AC&required_district=on&workdays=5&wage_min=3000000",
+      "passed": true
+    },
+    {
+      "search": "?mode=recommend&view=occupation",
+      "passed": true
+    }
+  ],
+  "limitation": "React SSR only; effects, browser interaction and responsive layout are not verified."
+}

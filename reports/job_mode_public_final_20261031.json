@@ -1,0 +1,61 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "checked_at": "2026-10-30T22:41:54.030Z",
+  "checks": [
+    {
+      "profile": "desktop",
+      "mode": "search",
+      "button_visuals": true,
+      "active_state": true,
+      "no_overflow": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "desktop",
+      "transition": "search to recommend",
+      "method": "keyboard",
+      "filters_preserved": true
+    },
+    {
+      "profile": "desktop",
+      "mode": "recommend",
+      "button_visuals": true,
+      "active_state": true,
+      "no_overflow": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "desktop",
+      "transition": "recommend to search",
+      "filters_preserved": true
+    },
+    {
+      "profile": "mobile",
+      "mode": "search",
+      "button_visuals": true,
+      "active_state": true,
+      "no_overflow": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "mobile",
+      "transition": "search to recommend",
+      "method": "touch",
+      "filters_preserved": true
+    },
+    {
+      "profile": "mobile",
+      "mode": "recommend",
+      "button_visuals": true,
+      "active_state": true,
+      "no_overflow": true,
+      "axe_violations": 0
+    },
+    {
+      "profile": "mobile",
+      "transition": "recommend to search",
+      "filters_preserved": true
+    }
+  ],
+  "errors": []
+}

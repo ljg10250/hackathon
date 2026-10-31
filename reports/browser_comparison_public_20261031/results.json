@@ -1,0 +1,818 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "verified_at": "2026-10-30T20:13:45.204Z",
+  "versions": {
+    "@axe-core/playwright": "4.14.0",
+    "playwright": "1.64.1"
+  },
+  "browserVersion": "156.0.8078.74",
+  "mode": "all",
+  "browser": "Installed Chrome; isolated ephemeral contexts; headless",
+  "checks": [
+    {
+      "name": "desktop home loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "desktop districts loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "desktop occupations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "desktop jobs loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "desktop recommendations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "desktop detail loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "desktop skip link and keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "tablet home loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "tablet districts loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "tablet occupations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "tablet jobs loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "tablet recommendations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "tablet detail loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "tablet skip link and keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "mobile home loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "mobile districts loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "mobile occupations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "mobile jobs loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "mobile recommendations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "mobile detail loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "mobile skip link and keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "narrow home loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "narrow districts loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "narrow occupations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "narrow jobs loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "narrow recommendations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "narrow detail loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "narrow skip link and keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "landscape home loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "landscape districts loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "landscape occupations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "landscape jobs loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "landscape recommendations loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "landscape detail loaded and contained",
+      "passed": true
+    },
+    {
+      "name": "landscape skip link and keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "desktop actual search selection, pagination, detail and return",
+      "passed": true
+    },
+    {
+      "name": "desktop home quarter selection and same-basis comparison",
+      "passed": true
+    },
+    {
+      "name": "desktop recover from a synthetic API failure without sample data",
+      "passed": true
+    },
+    {
+      "name": "desktop empty search and reset",
+      "passed": true
+    },
+    {
+      "name": "desktop district controls, history and job exploration",
+      "passed": true
+    },
+    {
+      "name": "desktop occupation chart controls and raw calculation",
+      "passed": true
+    },
+    {
+      "name": "desktop occupation analysis to verified-group jobs and preserved return",
+      "passed": true
+    },
+    {
+      "name": "desktop recommendation score, alternatives, unknown group and return",
+      "passed": true
+    },
+    {
+      "name": "desktop required district is not relaxed in region alternative",
+      "passed": true
+    },
+    {
+      "name": "mobile actual search selection, pagination, detail and return",
+      "passed": true
+    },
+    {
+      "name": "mobile home quarter selection and same-basis comparison",
+      "passed": true
+    },
+    {
+      "name": "mobile recover from a synthetic API failure without sample data",
+      "passed": true
+    },
+    {
+      "name": "mobile empty search and reset",
+      "passed": true
+    },
+    {
+      "name": "mobile district controls, history and job exploration",
+      "passed": true
+    },
+    {
+      "name": "mobile occupation chart controls and raw calculation",
+      "passed": true
+    },
+    {
+      "name": "mobile occupation analysis to verified-group jobs and preserved return",
+      "passed": true
+    },
+    {
+      "name": "mobile recommendation score, alternatives, unknown group and return",
+      "passed": true
+    },
+    {
+      "name": "mobile required district is not relaxed in region alternative",
+      "passed": true
+    }
+  ],
+  "audits": [
+    {
+      "profile": "desktop",
+      "route": "home",
+      "path": "/",
+      "metrics": {
+        "viewport": 1280,
+        "document": 1280,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 31,
+        "navBottom": 75,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "route": "districts",
+      "path": "/districts",
+      "metrics": {
+        "viewport": 1280,
+        "document": 1280,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 31,
+        "navBottom": 75,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "route": "occupations",
+      "path": "/occupations",
+      "metrics": {
+        "viewport": 1280,
+        "document": 1280,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 31,
+        "navBottom": 75,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "desktop",
+      "route": "jobs",
+      "path": "/jobs",
+      "metrics": {
+        "viewport": 1280,
+        "document": 1280,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 31,
+        "navBottom": 75,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "profile": "desktop",
+      "route": "recommendations",
+      "path": "/jobs?mode=recommend",
+      "metrics": {
+        "viewport": 1280,
+        "document": 1280,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 31,
+        "navBottom": 75,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "desktop",
+      "route": "detail",
+      "path": "/jobs/job-d9b71a0aec07-39806",
+      "metrics": {
+        "viewport": 1280,
+        "document": 1280,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 31,
+        "navBottom": 75,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "tablet",
+      "route": "home",
+      "path": "/",
+      "metrics": {
+        "viewport": 768,
+        "document": 768,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ]
+    },
+    {
+      "profile": "tablet",
+      "route": "districts",
+      "path": "/districts",
+      "metrics": {
+        "viewport": 768,
+        "document": 768,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "profile": "tablet",
+      "route": "occupations",
+      "path": "/occupations",
+      "metrics": {
+        "viewport": 768,
+        "document": 768,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "tablet",
+      "route": "jobs",
+      "path": "/jobs",
+      "metrics": {
+        "viewport": 768,
+        "document": 768,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "profile": "tablet",
+      "route": "recommendations",
+      "path": "/jobs?mode=recommend",
+      "metrics": {
+        "viewport": 768,
+        "document": 768,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "tablet",
+      "route": "detail",
+      "path": "/jobs/job-d9b71a0aec07-39806",
+      "metrics": {
+        "viewport": 768,
+        "document": 768,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "mobile",
+      "route": "home",
+      "path": "/",
+      "metrics": {
+        "viewport": 390,
+        "document": 390,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 775,
+        "navBottom": 844,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "route": "districts",
+      "path": "/districts",
+      "metrics": {
+        "viewport": 390,
+        "document": 390,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 775,
+        "navBottom": 844,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "route": "occupations",
+      "path": "/occupations",
+      "metrics": {
+        "viewport": 390,
+        "document": 390,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 775,
+        "navBottom": 844,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "mobile",
+      "route": "jobs",
+      "path": "/jobs",
+      "metrics": {
+        "viewport": 390,
+        "document": 390,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 775,
+        "navBottom": 844,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "profile": "mobile",
+      "route": "recommendations",
+      "path": "/jobs?mode=recommend",
+      "metrics": {
+        "viewport": 390,
+        "document": 390,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 775,
+        "navBottom": 844,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "mobile",
+      "route": "detail",
+      "path": "/jobs/job-d9b71a0aec07-39806",
+      "metrics": {
+        "viewport": 390,
+        "document": 390,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 775,
+        "navBottom": 844,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "narrow",
+      "route": "home",
+      "path": "/",
+      "metrics": {
+        "viewport": 320,
+        "document": 320,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 671,
+        "navBottom": 740,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ]
+    },
+    {
+      "profile": "narrow",
+      "route": "districts",
+      "path": "/districts",
+      "metrics": {
+        "viewport": 320,
+        "document": 320,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 671,
+        "navBottom": 740,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ]
+    },
+    {
+      "profile": "narrow",
+      "route": "occupations",
+      "path": "/occupations",
+      "metrics": {
+        "viewport": 320,
+        "document": 320,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 671,
+        "navBottom": 740,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "narrow",
+      "route": "jobs",
+      "path": "/jobs",
+      "metrics": {
+        "viewport": 320,
+        "document": 320,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 671,
+        "navBottom": 740,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "profile": "narrow",
+      "route": "recommendations",
+      "path": "/jobs?mode=recommend",
+      "metrics": {
+        "viewport": 320,
+        "document": 320,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 671,
+        "navBottom": 740,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "narrow",
+      "route": "detail",
+      "path": "/jobs/job-d9b71a0aec07-39806",
+      "metrics": {
+        "viewport": 320,
+        "document": 320,
+        "bodyFont": "16px",
+        "navPosition": "fixed",
+        "navTop": 671,
+        "navBottom": 740,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "landscape",
+      "route": "home",
+      "path": "/",
+      "metrics": {
+        "viewport": 844,
+        "document": 844,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ]
+    },
+    {
+      "profile": "landscape",
+      "route": "districts",
+      "path": "/districts",
+      "metrics": {
+        "viewport": 844,
+        "document": 844,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ]
+    },
+    {
+      "profile": "landscape",
+      "route": "occupations",
+      "path": "/occupations",
+      "metrics": {
+        "viewport": 844,
+        "document": 844,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "landscape",
+      "route": "jobs",
+      "path": "/jobs",
+      "metrics": {
+        "viewport": 844,
+        "document": 844,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "profile": "landscape",
+      "route": "recommendations",
+      "path": "/jobs?mode=recommend",
+      "metrics": {
+        "viewport": 844,
+        "document": 844,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "landscape",
+      "route": "detail",
+      "path": "/jobs/job-d9b71a0aec07-39806",
+      "metrics": {
+        "viewport": 844,
+        "document": 844,
+        "bodyFont": "16px",
+        "navPosition": "static",
+        "navTop": 90,
+        "navBottom": 134,
+        "fontLoaded": true,
+        "storageKeys": []
+      },
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "passed": 53,
+  "failed": 0,
+  "axe_violations": 0,
+  "limitations": "Chromium viewport/touch emulation only. Does not certify all WCAG criteria or physical iOS/Android devices."
+}

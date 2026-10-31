@@ -1,0 +1,66 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "verified_at": "2026-10-30T23:07:52.582Z",
+  "checks": [
+    {
+      "path": "/api/visualizations?area=capital",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/visualizations?area=districts",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "all92 capital and275 district observations vs independent official responses",
+      "passed": true
+    },
+    {
+      "path": "/api/indicators",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/districts",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/indicators?metric=unemployment_rate",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/visualizations?area=unknown",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "path": "/api/visualizations?area=capital&area=districts",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "path": "/api/visualizations?period=2026-Q3",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "name": "capital4region chart,92points and context",
+      "passed": true
+    },
+    {
+      "name": "25official polygons,275heatmap values, selected history and job link",
+      "passed": true
+    },
+    {
+      "name": "new home explanation",
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "capital_rows": 92,
+  "district_rows": 275,
+  "map_districts": 25
+}

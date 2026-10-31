@@ -1,0 +1,18 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "checked_at": "2026-10-30T22:51:26.821Z",
+  "checks": [
+    {
+      "profile": "desktop",
+      "requested_sentence_removed": true,
+      "essential_snapshot_and_status_notice_preserved": true,
+      "mode_buttons_preserved": true
+    },
+    {
+      "profile": "mobile",
+      "requested_sentence_removed": true,
+      "essential_snapshot_and_status_notice_preserved": true,
+      "mode_buttons_preserved": true
+    }
+  ]
+}

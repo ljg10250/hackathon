@@ -1,0 +1,84 @@
+{
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "verified_at": "2026-10-30T18:15:21.182Z",
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/api/jobs?district=강남구&page_size=3",
+      "status": 200,
+      "rows": 3,
+      "total": 860
+    },
+    {
+      "path": "/api/jobs/job-d9b71a0aec07-39806",
+      "status": 200
+    },
+    {
+      "path": "/api/indicators",
+      "status": 200,
+      "rows": 46
+    },
+    {
+      "path": "/api/indicators?metric=unemployment_rate",
+      "status": 200,
+      "rows": 0
+    },
+    {
+      "path": "/api/districts",
+      "status": 200,
+      "rows": 25
+    },
+    {
+      "path": "/api/occupations",
+      "status": 200,
+      "rows": 35
+    },
+    {
+      "path": "/api/jobs?page_size=999",
+      "status": 400
+    },
+    {
+      "path": "/api/jobs?district=부산",
+      "status": 400
+    },
+    {
+      "path": "/api/unknown",
+      "status": 404
+    },
+    {
+      "path": "/api/jobs?q=존재하지않는공고검증문구",
+      "status": 200,
+      "rows": 0,
+      "total": 0
+    },
+    {
+      "path": "/api/jobs?page=9999",
+      "status": 200,
+      "rows": 0,
+      "total": 10743
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/districts",
+      "status": 200
+    },
+    {
+      "path": "/occupations",
+      "status": 200
+    },
+    {
+      "path": "/jobs",
+      "status": 200
+    },
+    {
+      "path": "/jobs/job-d9b71a0aec07-39806",
+      "status": 200
+    }
+  ]
+}

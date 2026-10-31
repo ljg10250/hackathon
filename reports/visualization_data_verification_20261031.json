@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-10-30T20:43:40.434389+00:00",
+  "district_cells_matched": 275,
+  "underlying_table_cells_matched": 275,
+  "capital_cells_matched": 92,
+  "district_raw_sha256": "ef6bf103303bb6f49881c0b5c8b154818f1c2be24aa54374a2ddb0b1a9518dd6",
+  "capital_snapshot_sha256": "cc84b222ba34daf3427493d3aa3ef35d173bd1a20049a903c0631aad8532988f",
+  "unit_resolution": {
+    "shared_response_unit": "천명",
+    "selected_item_unit": "%",
+    "evidence": "항목 T00=취업자(천명), T12=고용률(%). INH 표의 정의·산식은 15~29세 취업자/동 연령 인구×100. 공통 UNIT_NM을 선택 항목 단위로 사용하지 않음."
+  },
+  "frequency_resolution": {
+    "request": "H",
+    "official_response": "S",
+    "metadata": "반기",
+    "original_periods": "YYYY.1/2, YYYY.2/2",
+    "meaning": "반기 대표 조사기간4월/10월, 분기와 결합하지 않음"
+  },
+  "district_geography_basis": "거주지 기준(표본가구 내 상주 가구원)",
+  "passed": true
+}

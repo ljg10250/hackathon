@@ -1,0 +1,132 @@
+{
+  "verified_at": "2026-10-30T19:53:22.127332+00:00",
+  "raw_sha256": "3cb0f71191aecda8cf49ab1fe1a519fd1263eae93f7243c340f8855b11bbaf94",
+  "official_snapshot_sha256": "03f8d6369fec4aa901aa8bd6557d22cd748d24af74070c0a160568c0c2914d15",
+  "table_id": "INH_1DA7015S",
+  "org_id": "101",
+  "item_id": "T90",
+  "age_code": "75",
+  "age_scope": "15~29세",
+  "unit": "%",
+  "frequency": "quarterly",
+  "raw_regions": 17,
+  "raw_periods": 23,
+  "matched_numeric_cells": 375,
+  "missing_cells_preserved": [
+    {
+      "region": "전남광주통합특별시",
+      "period": "2021-Q1",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2021-Q2",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2021-Q3",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2021-Q4",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2022-Q1",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2022-Q2",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2022-Q3",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2022-Q4",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2023-Q1",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2023-Q2",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2023-Q3",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2023-Q4",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2024-Q1",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2024-Q2",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2024-Q3",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    },
+    {
+      "region": "전남광주통합특별시",
+      "period": "2024-Q4",
+      "raw_token": "-",
+      "official_response": "observation_absent"
+    }
+  ],
+  "processed_rows_matched": 46,
+  "region_normalization": {
+    "00": "계 → 전국",
+    "11": "서울특별시"
+  },
+  "normalization_evidence": [
+    "ITM: 시도별(A)의 00=계/Total, 11=서울특별시/Seoul",
+    "SOURCE: 경제활동인구조사",
+    "EXPL examinObjArea=전국, examinObjrange=전국 표본가구 내 상주하는 만 15세 이상 가구원",
+    "동일 표의 연령 75=15~29세, 항목 T90=고용률(%), Q=분기"
+  ],
+  "geography_basis": "거주지 기준(전국 표본가구 내 상주 가구원 조사)",
+  "limitations": [
+    "375개 수치와 16개 결측을 대조한 CSV-표 내용 매칭이며 과거 다운로드 URL·추출시각 복구가 아님",
+    "전국은 서울을 포함함. 고용률은 개인 취업확률이나 지역 인과효과가 아님",
+    "표본오차·유의성은 계산하지 않음",
+    "실업률·자치구 원 표 검증을 대신하지 않음"
+  ],
+  "passed": true
+}

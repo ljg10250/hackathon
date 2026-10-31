@@ -1,0 +1,1855 @@
+{
+  "verified_at": "2026-10-30T20:09:53.923Z",
+  "timezone": "Asia/Seoul",
+  "base": "https://seoul-youth-job-compass.ljg10250000.workers.dev",
+  "calls": [
+    {
+      "name": "실제 DB 연결과 공개 공고 수",
+      "requested_at": "2026-10-30T20:09:46.882Z",
+      "method": "GET",
+      "url": "https://seoul-youth-job-compass.ljg10250000.workers.dev/api/health",
+      "status": 200,
+      "elapsed_ms": 1010,
+      "response_headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store"
+      },
+      "response": {
+        "data": {
+          "status": "ok",
+          "database": "connected",
+          "public_job_rows": 10743,
+          "stage": 5,
+          "ui_verification_status": "chromium_viewports_verified",
+          "recommendation_status": "implemented_v1",
+          "unemployment_status": "pending_age"
+        },
+        "sources": [
+          {
+            "id": "districts",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년고용률(시군구)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "halfyear",
+            "age_scope": "15~29세 (CSV 명시)",
+            "unit": "%",
+            "geography_basis": "서울 자치구·거주지 기준 추정",
+            "period": "2021-H1~2026-H1",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_metadata",
+            "notes": "원 표 ID·지역별고용조사 반기 대표 시점·주석 대조 필요. 서울 평균 재계산 금지."
+          },
+          {
+            "id": "employment",
+            "source": "KOSIS · 경제활동인구조사",
+            "title": "청년고용률(시도)",
+            "source_url": "https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=INH_1DA7015S",
+            "table_id": "INH_1DA7015S",
+            "frequency": "quarterly",
+            "age_scope": "15~29세",
+            "unit": "%",
+            "geography_basis": "거주지 기준(전국 표본가구 내 상주 가구원 조사)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": "2026-10-30T19:53:22.127332+00:00",
+            "verification_status": "verified_metadata",
+            "notes": "KOSIS 원 표 101/INH_1DA7015S, T90, 연령75, 지역00(계/Total)·11(서울). 전국 조사 범위와 시도별 총계 메타데이터로 계→전국을 확인. CSV 전체375개 수치 일치·16개 결측 보존, 공개46행 수치 일치. 공식 응답 조회 2026-10-30T19:51:56.378Z. CSV 최초 추출시각은 미기록. 전국은 서울 포함. 표본오차·유의성 미계산. 근거 kosis-employment-20261031."
+          },
+          {
+            "id": "jobs",
+            "source": "서울특별시",
+            "title": "서울시 일자리포털 채용정보",
+            "source_url": "https://data.seoul.go.kr/dataList/OA-23047/S/1/datasetView.do",
+            "table_id": "OA-23047",
+            "frequency": "snapshot",
+            "age_scope": "전체 연령·청년 전용 아님",
+            "unit": "공고 행",
+            "geography_basis": "근무지 서울",
+            "period": "2026-08-31~2026-10-29 등록",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "partial",
+            "notes": "원본 추출시각·현재 모집상태·직종분류 버전 미확인. 공식 카탈로그 스키마와 대조. 원 공고 ID/URL 없음."
+          },
+          {
+            "id": "mapping",
+            "source": "한국고용정보원",
+            "title": "취업알선직업분류 2025 해설서",
+            "source_url": "https://statistics.keis.or.kr/keis/ko/proj/114/pblc/detail.do?categoryIdx=125&pubIdx=11319",
+            "table_id": null,
+            "frequency": "classification_version",
+            "age_scope": "해당 없음",
+            "unit": "직종 코드",
+            "geography_basis": "전국 직업분류",
+            "period": "2025 분류 · 2026-06-30 게시",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "verified_hierarchy_partial",
+            "notes": "공식 PDF 963코드 추출. 공고 코드+명칭 323쌍 일치. 원본 서비스 버전 미기록. 계층 연결만 검증; 관련 직종 추천 관계 없음."
+          },
+          {
+            "id": "market",
+            "source": "한국고용정보원 · 고용24",
+            "title": "2026년 9월 구인구직통계",
+            "source_url": "https://www.keis.or.kr/keis/ko/bbs/123/detail.do?pstSn=64778",
+            "table_id": null,
+            "frequency": "monthly",
+            "age_scope": "전체 연령",
+            "unit": "신규구인인원 명 / 신규구직건수 건",
+            "geography_basis": "구인·구직 등록 지방노동관서 기준",
+            "period": "2026-09",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "local_verified",
+            "notes": "KECO2025 35개, KSCO8 57개 별도 분류. 원본 XLSX SHA256 보존. 공식 첨부와 바이트 일치 미검증."
+          },
+          {
+            "id": "unemployment",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년실업률(시도)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "quarterly",
+            "age_scope": "미확인",
+            "unit": "%",
+            "geography_basis": "시도 (원 표 확인 필요)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_age",
+            "notes": "일반 청년실업률 정의는 15~29세이나 해당 CSV 원 표·연령 선택은 미확인. 공개 수치 제외."
+          }
+        ]
+      }
+    },
+    {
+      "name": "KECO2025 등록 관서별 직종 수급 가공",
+      "requested_at": "2026-10-30T20:09:47.895Z",
+      "method": "GET",
+      "url": "https://seoul-youth-job-compass.ljg10250000.workers.dev/api/occupations",
+      "status": 200,
+      "elapsed_ms": 502,
+      "response_headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store"
+      },
+      "response": {
+        "data": [
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "건설·채굴 연구개발직 및 공학기술직",
+            "period": "2026-09",
+            "openings": 147,
+            "seeking": 948,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "14",
+            "ratio": 0.1550632911392405,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "건설·채굴직",
+            "period": "2026-09",
+            "openings": 646,
+            "seeking": 1602,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "70",
+            "ratio": 0.40324594257178525,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "경영·행정·사무직",
+            "period": "2026-09",
+            "openings": 2663,
+            "seeking": 12869,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "02",
+            "ratio": 0.20693138550003887,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "경찰·소방·교도직",
+            "period": "2026-09",
+            "openings": 0,
+            "seeking": 72,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "24",
+            "ratio": 0,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "경호·경비직",
+            "period": "2026-09",
+            "openings": 851,
+            "seeking": 2039,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "54",
+            "ratio": 0.4173614516920059,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "관리직(임원·부서장)",
+            "period": "2026-09",
+            "openings": 226,
+            "seeking": 2166,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "01",
+            "ratio": 0.10433979686057249,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "교육직",
+            "period": "2026-09",
+            "openings": 111,
+            "seeking": 1706,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "21",
+            "ratio": 0.06506447831184056,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "군인",
+            "period": "2026-09",
+            "openings": 0,
+            "seeking": 8,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "25",
+            "ratio": 0,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "금속·재료 설치·정비·생산직(판금·단조·주조·용접·도장 등)",
+            "period": "2026-09",
+            "openings": 28,
+            "seeking": 178,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "82",
+            "ratio": 0.15730337078651685,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "금융·보험직",
+            "period": "2026-09",
+            "openings": 211,
+            "seeking": 1068,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "03",
+            "ratio": 0.19756554307116106,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "기계 설치·정비·생산직",
+            "period": "2026-09",
+            "openings": 307,
+            "seeking": 764,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "81",
+            "ratio": 0.4018324607329843,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "농림어업직",
+            "period": "2026-09",
+            "openings": 30,
+            "seeking": 215,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "90",
+            "ratio": 0.13953488372093023,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "돌봄 서비스직(간병·육아)",
+            "period": "2026-09",
+            "openings": 4730,
+            "seeking": 3320,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "55",
+            "ratio": 1.4246987951807228,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "미용·예식 및 반려동물 서비스직",
+            "period": "2026-09",
+            "openings": 26,
+            "seeking": 915,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "51",
+            "ratio": 0.02841530054644809,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "법률직",
+            "period": "2026-09",
+            "openings": 6,
+            "seeking": 420,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "22",
+            "ratio": 0.014285714285714285,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "보건·의료직",
+            "period": "2026-09",
+            "openings": 467,
+            "seeking": 2751,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "30",
+            "ratio": 0.1697564521992003,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "사회복지·종교직",
+            "period": "2026-09",
+            "openings": 847,
+            "seeking": 2698,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "23",
+            "ratio": 0.3139362490733877,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "섬유·의복 생산직",
+            "period": "2026-09",
+            "openings": 20,
+            "seeking": 207,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "86",
+            "ratio": 0.0966183574879227,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "스포츠·레크리에이션직",
+            "period": "2026-09",
+            "openings": 16,
+            "seeking": 273,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "42",
+            "ratio": 0.05860805860805861,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "식품 가공·생산직",
+            "period": "2026-09",
+            "openings": 151,
+            "seeking": 500,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "87",
+            "ratio": 0.302,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "여행·숙박·오락 서비스직",
+            "period": "2026-09",
+            "openings": 29,
+            "seeking": 497,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "52",
+            "ratio": 0.05835010060362173,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "영업·판매직",
+            "period": "2026-09",
+            "openings": 716,
+            "seeking": 2510,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "61",
+            "ratio": 0.2852589641434263,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "예술·디자인·방송직",
+            "period": "2026-09",
+            "openings": 181,
+            "seeking": 6067,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "41",
+            "ratio": 0.029833525630459864,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "운전·운송직",
+            "period": "2026-09",
+            "openings": 937,
+            "seeking": 1512,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "62",
+            "ratio": 0.6197089947089947,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "음식 서비스직",
+            "period": "2026-09",
+            "openings": 1952,
+            "seeking": 3244,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "53",
+            "ratio": 0.6017262638717632,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "인문·사회과학 연구직",
+            "period": "2026-09",
+            "openings": 3,
+            "seeking": 97,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "11",
+            "ratio": 0.030927835051546393,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "인쇄·목재·공예 및 기타 설치·정비·생산직",
+            "period": "2026-09",
+            "openings": 53,
+            "seeking": 262,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "88",
+            "ratio": 0.20229007633587787,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "자연·생명과학 연구직",
+            "period": "2026-09",
+            "openings": 22,
+            "seeking": 324,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "12",
+            "ratio": 0.06790123456790123,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "전기·전자 설치·정비·생산직",
+            "period": "2026-09",
+            "openings": 318,
+            "seeking": 1249,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "83",
+            "ratio": 0.2546036829463571,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "정보통신 설치·정비직",
+            "period": "2026-09",
+            "openings": 45,
+            "seeking": 137,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "84",
+            "ratio": 0.3284671532846715,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "정보통신 연구개발직 및 공학기술직",
+            "period": "2026-09",
+            "openings": 126,
+            "seeking": 3236,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "13",
+            "ratio": 0.03893695920889988,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "제조 단순직",
+            "period": "2026-09",
+            "openings": 191,
+            "seeking": 484,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "89",
+            "ratio": 0.39462809917355374,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "제조 연구개발직 및 공학기술직",
+            "period": "2026-09",
+            "openings": 164,
+            "seeking": 2031,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "15",
+            "ratio": 0.08074839980305268,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "청소 및 기타 개인서비스직",
+            "period": "2026-09",
+            "openings": 2055,
+            "seeking": 3216,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "56",
+            "ratio": 0.6389925373134329,
+            "ratio_missing_reason": null
+          },
+          {
+            "source_id": "market",
+            "classification": "KECO2025",
+            "occupation_name": "화학·환경 설치·정비·생산직",
+            "period": "2026-09",
+            "openings": 24,
+            "seeking": 83,
+            "geography_basis": "registration_office",
+            "age_scope": "all",
+            "occupation_group": "85",
+            "ratio": 0.2891566265060241,
+            "ratio_missing_reason": null
+          }
+        ],
+        "sources": [
+          {
+            "id": "districts",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년고용률(시군구)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "halfyear",
+            "age_scope": "15~29세 (CSV 명시)",
+            "unit": "%",
+            "geography_basis": "서울 자치구·거주지 기준 추정",
+            "period": "2021-H1~2026-H1",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_metadata",
+            "notes": "원 표 ID·지역별고용조사 반기 대표 시점·주석 대조 필요. 서울 평균 재계산 금지."
+          },
+          {
+            "id": "employment",
+            "source": "KOSIS · 경제활동인구조사",
+            "title": "청년고용률(시도)",
+            "source_url": "https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=INH_1DA7015S",
+            "table_id": "INH_1DA7015S",
+            "frequency": "quarterly",
+            "age_scope": "15~29세",
+            "unit": "%",
+            "geography_basis": "거주지 기준(전국 표본가구 내 상주 가구원 조사)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": "2026-10-30T19:53:22.127332+00:00",
+            "verification_status": "verified_metadata",
+            "notes": "KOSIS 원 표 101/INH_1DA7015S, T90, 연령75, 지역00(계/Total)·11(서울). 전국 조사 범위와 시도별 총계 메타데이터로 계→전국을 확인. CSV 전체375개 수치 일치·16개 결측 보존, 공개46행 수치 일치. 공식 응답 조회 2026-10-30T19:51:56.378Z. CSV 최초 추출시각은 미기록. 전국은 서울 포함. 표본오차·유의성 미계산. 근거 kosis-employment-20261031."
+          },
+          {
+            "id": "jobs",
+            "source": "서울특별시",
+            "title": "서울시 일자리포털 채용정보",
+            "source_url": "https://data.seoul.go.kr/dataList/OA-23047/S/1/datasetView.do",
+            "table_id": "OA-23047",
+            "frequency": "snapshot",
+            "age_scope": "전체 연령·청년 전용 아님",
+            "unit": "공고 행",
+            "geography_basis": "근무지 서울",
+            "period": "2026-08-31~2026-10-29 등록",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "partial",
+            "notes": "원본 추출시각·현재 모집상태·직종분류 버전 미확인. 공식 카탈로그 스키마와 대조. 원 공고 ID/URL 없음."
+          },
+          {
+            "id": "mapping",
+            "source": "한국고용정보원",
+            "title": "취업알선직업분류 2025 해설서",
+            "source_url": "https://statistics.keis.or.kr/keis/ko/proj/114/pblc/detail.do?categoryIdx=125&pubIdx=11319",
+            "table_id": null,
+            "frequency": "classification_version",
+            "age_scope": "해당 없음",
+            "unit": "직종 코드",
+            "geography_basis": "전국 직업분류",
+            "period": "2025 분류 · 2026-06-30 게시",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "verified_hierarchy_partial",
+            "notes": "공식 PDF 963코드 추출. 공고 코드+명칭 323쌍 일치. 원본 서비스 버전 미기록. 계층 연결만 검증; 관련 직종 추천 관계 없음."
+          },
+          {
+            "id": "market",
+            "source": "한국고용정보원 · 고용24",
+            "title": "2026년 9월 구인구직통계",
+            "source_url": "https://www.keis.or.kr/keis/ko/bbs/123/detail.do?pstSn=64778",
+            "table_id": null,
+            "frequency": "monthly",
+            "age_scope": "전체 연령",
+            "unit": "신규구인인원 명 / 신규구직건수 건",
+            "geography_basis": "구인·구직 등록 지방노동관서 기준",
+            "period": "2026-09",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "local_verified",
+            "notes": "KECO2025 35개, KSCO8 57개 별도 분류. 원본 XLSX SHA256 보존. 공식 첨부와 바이트 일치 미검증."
+          },
+          {
+            "id": "unemployment",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년실업률(시도)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "quarterly",
+            "age_scope": "미확인",
+            "unit": "%",
+            "geography_basis": "시도 (원 표 확인 필요)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_age",
+            "notes": "일반 청년실업률 정의는 15~29세이나 해당 CSV 원 표·연령 선택은 미확인. 공개 수치 제외."
+          }
+        ],
+        "unit": "신규구인인원(명) / 신규구직건수(건)",
+        "age_scope": "전체 연령",
+        "geography_basis": "등록 지방노동관서"
+      }
+    },
+    {
+      "name": "실제 서울 공고의 원본 직종 선택",
+      "requested_at": "2026-10-30T20:09:48.398Z",
+      "method": "GET",
+      "url": "https://seoul-youth-job-compass.ljg10250000.workers.dev/api/jobs?district=%EA%B0%95%EB%82%A8%EA%B5%AC&page_size=1",
+      "status": 200,
+      "elapsed_ms": 508,
+      "response_headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store"
+      },
+      "response": {
+        "data": [
+          {
+            "id": "job-d9b71a0aec07-39806",
+            "source_id": "jobs",
+            "source_row": 39806,
+            "company": "(주)유진컨티넨탈",
+            "title": "명품 세탁 영업 및 영업관리",
+            "district": "강남구",
+            "occupation_code": "613204",
+            "occupation_name": "일반 제품 영업원(613204)",
+            "experience": "관계없음",
+            "employment_type": "기간의 정함이 있는 근로계약3 개월/ 계약기간 만료 후 상용직전환검토/ 파견근로 비희망/ 대체인력채용 비희망",
+            "employment_type_code": "20",
+            "workdays": 5,
+            "wage_type": "연봉",
+            "wage_min": 26000000,
+            "wage_max": 33000000,
+            "wage_text": "연봉26,000,000원 이상 ~ 33,000,000원 이하,",
+            "posted_at": "2026-10-29",
+            "deadline_date": "2026-12-27",
+            "deadline_kind": "채용시까지(기재일 포함)",
+            "quality_status": "partial",
+            "conversion_verified": false,
+            "original_url": null
+          }
+        ],
+        "sources": [
+          {
+            "id": "districts",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년고용률(시군구)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "halfyear",
+            "age_scope": "15~29세 (CSV 명시)",
+            "unit": "%",
+            "geography_basis": "서울 자치구·거주지 기준 추정",
+            "period": "2021-H1~2026-H1",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_metadata",
+            "notes": "원 표 ID·지역별고용조사 반기 대표 시점·주석 대조 필요. 서울 평균 재계산 금지."
+          },
+          {
+            "id": "employment",
+            "source": "KOSIS · 경제활동인구조사",
+            "title": "청년고용률(시도)",
+            "source_url": "https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=INH_1DA7015S",
+            "table_id": "INH_1DA7015S",
+            "frequency": "quarterly",
+            "age_scope": "15~29세",
+            "unit": "%",
+            "geography_basis": "거주지 기준(전국 표본가구 내 상주 가구원 조사)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": "2026-10-30T19:53:22.127332+00:00",
+            "verification_status": "verified_metadata",
+            "notes": "KOSIS 원 표 101/INH_1DA7015S, T90, 연령75, 지역00(계/Total)·11(서울). 전국 조사 범위와 시도별 총계 메타데이터로 계→전국을 확인. CSV 전체375개 수치 일치·16개 결측 보존, 공개46행 수치 일치. 공식 응답 조회 2026-10-30T19:51:56.378Z. CSV 최초 추출시각은 미기록. 전국은 서울 포함. 표본오차·유의성 미계산. 근거 kosis-employment-20261031."
+          },
+          {
+            "id": "jobs",
+            "source": "서울특별시",
+            "title": "서울시 일자리포털 채용정보",
+            "source_url": "https://data.seoul.go.kr/dataList/OA-23047/S/1/datasetView.do",
+            "table_id": "OA-23047",
+            "frequency": "snapshot",
+            "age_scope": "전체 연령·청년 전용 아님",
+            "unit": "공고 행",
+            "geography_basis": "근무지 서울",
+            "period": "2026-08-31~2026-10-29 등록",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "partial",
+            "notes": "원본 추출시각·현재 모집상태·직종분류 버전 미확인. 공식 카탈로그 스키마와 대조. 원 공고 ID/URL 없음."
+          },
+          {
+            "id": "mapping",
+            "source": "한국고용정보원",
+            "title": "취업알선직업분류 2025 해설서",
+            "source_url": "https://statistics.keis.or.kr/keis/ko/proj/114/pblc/detail.do?categoryIdx=125&pubIdx=11319",
+            "table_id": null,
+            "frequency": "classification_version",
+            "age_scope": "해당 없음",
+            "unit": "직종 코드",
+            "geography_basis": "전국 직업분류",
+            "period": "2025 분류 · 2026-06-30 게시",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "verified_hierarchy_partial",
+            "notes": "공식 PDF 963코드 추출. 공고 코드+명칭 323쌍 일치. 원본 서비스 버전 미기록. 계층 연결만 검증; 관련 직종 추천 관계 없음."
+          },
+          {
+            "id": "market",
+            "source": "한국고용정보원 · 고용24",
+            "title": "2026년 9월 구인구직통계",
+            "source_url": "https://www.keis.or.kr/keis/ko/bbs/123/detail.do?pstSn=64778",
+            "table_id": null,
+            "frequency": "monthly",
+            "age_scope": "전체 연령",
+            "unit": "신규구인인원 명 / 신규구직건수 건",
+            "geography_basis": "구인·구직 등록 지방노동관서 기준",
+            "period": "2026-09",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "local_verified",
+            "notes": "KECO2025 35개, KSCO8 57개 별도 분류. 원본 XLSX SHA256 보존. 공식 첨부와 바이트 일치 미검증."
+          },
+          {
+            "id": "unemployment",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년실업률(시도)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "quarterly",
+            "age_scope": "미확인",
+            "unit": "%",
+            "geography_basis": "시도 (원 표 확인 필요)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_age",
+            "notes": "일반 청년실업률 정의는 15~29세이나 해당 CSV 원 표·연령 선택은 미확인. 공개 수치 제외."
+          }
+        ],
+        "total": 860,
+        "page": 1,
+        "page_size": 1,
+        "score": null,
+        "occupation_group": null,
+        "message": "일반 검색입니다. 추천 점수·대안은 /api/recommendations에서 별도 조회합니다.",
+        "recruitment_status": "스냅샷 · 실제 모집상태 미확인"
+      }
+    },
+    {
+      "name": "필수 조건·선호 비례 환산·점수 범위",
+      "requested_at": "2026-10-30T20:09:48.906Z",
+      "method": "GET",
+      "url": "https://seoul-youth-job-compass.ljg10250000.workers.dev/api/recommendations?required=%7B%22workdays%22%3A%5B5%5D%7D&preferred=%7B%22occupation%22%3A%5B%22613204%22%5D%2C%22district%22%3A%5B%22%EA%B0%95%EB%82%A8%EA%B5%AC%22%5D%2C%22wage%22%3A%7B%22type%22%3A%22%EC%9B%94%EA%B8%89%22%2C%22minimum%22%3A3000000%7D%2C%22workdays%22%3A%5B5%5D%2C%22employment_type%22%3A%5B%2210%22%5D%7D&page_size=3",
+      "status": 200,
+      "elapsed_ms": 2286,
+      "response_headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store"
+      },
+      "response": {
+        "data": [
+          {
+            "id": "job-d9b71a0aec07-20395",
+            "title": "스카이패널 태양광사업부 지붕사업부 영업사원 모집",
+            "company": "스카이패널주식회사",
+            "district": "강서구",
+            "wage_max": null,
+            "wage_min": 3500000,
+            "workdays": 5,
+            "posted_at": "2026-10-07",
+            "source_id": "jobs",
+            "wage_text": "월급3,500,000원 이상,",
+            "wage_type": "월급",
+            "experience": "관계없음",
+            "source_row": 20395,
+            "original_url": null,
+            "deadline_date": "2026-11-06",
+            "deadline_kind": "날짜형",
+            "quality_status": "partial",
+            "recommendation": {
+              "eligibility": "eligible",
+              "score_label": "75.0 ~ 75.0",
+              "possible_score": 75,
+              "confirmed_score": 75,
+              "selected_weight": 100,
+              "required_details": [
+                {
+                  "field": "workdays",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match"
+                }
+              ],
+              "preference_details": [
+                {
+                  "field": "wage",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "minimum_satisfied",
+                  "weight": 20
+                },
+                {
+                  "field": "district",
+                  "state": "mismatch",
+                  "factor": 0,
+                  "reason": "different_value",
+                  "weight": 25
+                },
+                {
+                  "field": "workdays",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 10
+                },
+                {
+                  "field": "occupation",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 35
+                },
+                {
+                  "field": "employment_type",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 10
+                }
+              ],
+              "unknown_preferences": 0
+            },
+            "employment_type": "기간의 정함이 없는 근로계약/ 파견근로 비희망/ 대체인력채용 비희망",
+            "occupation_code": "613204",
+            "occupation_name": "일반 제품 영업원(613204)",
+            "conversion_verified": false,
+            "employment_type_code": "10"
+          },
+          {
+            "id": "job-d9b71a0aec07-39806",
+            "title": "명품 세탁 영업 및 영업관리",
+            "company": "(주)유진컨티넨탈",
+            "district": "강남구",
+            "wage_max": 33000000,
+            "wage_min": 26000000,
+            "workdays": 5,
+            "posted_at": "2026-10-29",
+            "source_id": "jobs",
+            "wage_text": "연봉26,000,000원 이상 ~ 33,000,000원 이하,",
+            "wage_type": "연봉",
+            "experience": "관계없음",
+            "source_row": 39806,
+            "original_url": null,
+            "deadline_date": "2026-12-27",
+            "deadline_kind": "채용시까지(기재일 포함)",
+            "quality_status": "partial",
+            "recommendation": {
+              "eligibility": "eligible",
+              "score_label": "70.0 ~ 90.0",
+              "possible_score": 90,
+              "confirmed_score": 70,
+              "selected_weight": 100,
+              "required_details": [
+                {
+                  "field": "workdays",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match"
+                }
+              ],
+              "preference_details": [
+                {
+                  "field": "wage",
+                  "state": "unknown",
+                  "factor": null,
+                  "reason": "wage_unit_not_comparable",
+                  "weight": 20
+                },
+                {
+                  "field": "district",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 25
+                },
+                {
+                  "field": "workdays",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 10
+                },
+                {
+                  "field": "occupation",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 35
+                },
+                {
+                  "field": "employment_type",
+                  "state": "mismatch",
+                  "factor": 0,
+                  "reason": "different_value",
+                  "weight": 10
+                }
+              ],
+              "unknown_preferences": 1
+            },
+            "employment_type": "기간의 정함이 있는 근로계약3 개월/ 계약기간 만료 후 상용직전환검토/ 파견근로 비희망/ 대체인력채용 비희망",
+            "occupation_code": "613204",
+            "occupation_name": "일반 제품 영업원(613204)",
+            "conversion_verified": false,
+            "employment_type_code": "20"
+          },
+          {
+            "id": "job-d9b71a0aec07-42219",
+            "title": "조리 지도 위원  (순회 조리) 조리사 모집공고",
+            "company": "주식회사 초이스엔",
+            "district": "강남구",
+            "wage_max": 4000000,
+            "wage_min": 4000000,
+            "workdays": 5,
+            "posted_at": "2026-10-28",
+            "source_id": "jobs",
+            "wage_text": "월급4,000,000원 이상 ~ 4,000,000원 이하,",
+            "wage_type": "월급",
+            "experience": "경력",
+            "source_row": 42219,
+            "original_url": null,
+            "deadline_date": "2026-11-11",
+            "deadline_kind": "날짜형",
+            "quality_status": "partial",
+            "recommendation": {
+              "eligibility": "eligible",
+              "score_label": "65.0 ~ 65.0",
+              "possible_score": 65,
+              "confirmed_score": 65,
+              "selected_weight": 100,
+              "required_details": [
+                {
+                  "field": "workdays",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match"
+                }
+              ],
+              "preference_details": [
+                {
+                  "field": "wage",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "minimum_satisfied",
+                  "weight": 20
+                },
+                {
+                  "field": "district",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 25
+                },
+                {
+                  "field": "workdays",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 10
+                },
+                {
+                  "field": "occupation",
+                  "state": "mismatch",
+                  "factor": 0,
+                  "reason": "different_value",
+                  "weight": 35
+                },
+                {
+                  "field": "employment_type",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 10
+                }
+              ],
+              "unknown_preferences": 0
+            },
+            "employment_type": "기간의 정함이 없는 근로계약/ 파견근로 비희망/ 대체인력채용 비희망",
+            "occupation_code": "531200",
+            "occupation_name": "한식 조리사(531200)",
+            "conversion_verified": false,
+            "employment_type_code": "10"
+          }
+        ],
+        "page": 1,
+        "view": "all",
+        "group": "eligible",
+        "total": 7072,
+        "counts": {
+          "eligible": 7072,
+          "needs_review": 626
+        },
+        "weights": {
+          "wage": 20,
+          "district": 25,
+          "workdays": 10,
+          "occupation": 35,
+          "employment_type": 10
+        },
+        "page_size": 3,
+        "score_semantics": "선호 조건 일치도이며 합격·취업 확률이 아닙니다.",
+        "alternative_status": "available",
+        "related_relation_count": 0,
+        "sources": [
+          {
+            "id": "districts",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년고용률(시군구)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "halfyear",
+            "age_scope": "15~29세 (CSV 명시)",
+            "unit": "%",
+            "geography_basis": "서울 자치구·거주지 기준 추정",
+            "period": "2021-H1~2026-H1",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_metadata",
+            "notes": "원 표 ID·지역별고용조사 반기 대표 시점·주석 대조 필요. 서울 평균 재계산 금지."
+          },
+          {
+            "id": "employment",
+            "source": "KOSIS · 경제활동인구조사",
+            "title": "청년고용률(시도)",
+            "source_url": "https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=INH_1DA7015S",
+            "table_id": "INH_1DA7015S",
+            "frequency": "quarterly",
+            "age_scope": "15~29세",
+            "unit": "%",
+            "geography_basis": "거주지 기준(전국 표본가구 내 상주 가구원 조사)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": "2026-10-30T19:53:22.127332+00:00",
+            "verification_status": "verified_metadata",
+            "notes": "KOSIS 원 표 101/INH_1DA7015S, T90, 연령75, 지역00(계/Total)·11(서울). 전국 조사 범위와 시도별 총계 메타데이터로 계→전국을 확인. CSV 전체375개 수치 일치·16개 결측 보존, 공개46행 수치 일치. 공식 응답 조회 2026-10-30T19:51:56.378Z. CSV 최초 추출시각은 미기록. 전국은 서울 포함. 표본오차·유의성 미계산. 근거 kosis-employment-20261031."
+          },
+          {
+            "id": "jobs",
+            "source": "서울특별시",
+            "title": "서울시 일자리포털 채용정보",
+            "source_url": "https://data.seoul.go.kr/dataList/OA-23047/S/1/datasetView.do",
+            "table_id": "OA-23047",
+            "frequency": "snapshot",
+            "age_scope": "전체 연령·청년 전용 아님",
+            "unit": "공고 행",
+            "geography_basis": "근무지 서울",
+            "period": "2026-08-31~2026-10-29 등록",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "partial",
+            "notes": "원본 추출시각·현재 모집상태·직종분류 버전 미확인. 공식 카탈로그 스키마와 대조. 원 공고 ID/URL 없음."
+          },
+          {
+            "id": "mapping",
+            "source": "한국고용정보원",
+            "title": "취업알선직업분류 2025 해설서",
+            "source_url": "https://statistics.keis.or.kr/keis/ko/proj/114/pblc/detail.do?categoryIdx=125&pubIdx=11319",
+            "table_id": null,
+            "frequency": "classification_version",
+            "age_scope": "해당 없음",
+            "unit": "직종 코드",
+            "geography_basis": "전국 직업분류",
+            "period": "2025 분류 · 2026-06-30 게시",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "verified_hierarchy_partial",
+            "notes": "공식 PDF 963코드 추출. 공고 코드+명칭 323쌍 일치. 원본 서비스 버전 미기록. 계층 연결만 검증; 관련 직종 추천 관계 없음."
+          },
+          {
+            "id": "market",
+            "source": "한국고용정보원 · 고용24",
+            "title": "2026년 9월 구인구직통계",
+            "source_url": "https://www.keis.or.kr/keis/ko/bbs/123/detail.do?pstSn=64778",
+            "table_id": null,
+            "frequency": "monthly",
+            "age_scope": "전체 연령",
+            "unit": "신규구인인원 명 / 신규구직건수 건",
+            "geography_basis": "구인·구직 등록 지방노동관서 기준",
+            "period": "2026-09",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "local_verified",
+            "notes": "KECO2025 35개, KSCO8 57개 별도 분류. 원본 XLSX SHA256 보존. 공식 첨부와 바이트 일치 미검증."
+          },
+          {
+            "id": "unemployment",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년실업률(시도)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "quarterly",
+            "age_scope": "미확인",
+            "unit": "%",
+            "geography_basis": "시도 (원 표 확인 필요)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_age",
+            "notes": "일반 청년실업률 정의는 15~29세이나 해당 CSV 원 표·연령 선택은 미확인. 공개 수치 제외."
+          }
+        ],
+        "recruitment_status": "스냅샷 · 실제 모집상태 미확인"
+      }
+    },
+    {
+      "name": "필수 미확인 분리",
+      "requested_at": "2026-10-30T20:09:51.193Z",
+      "method": "GET",
+      "url": "https://seoul-youth-job-compass.ljg10250000.workers.dev/api/recommendations?required=%7B%22workdays%22%3A%5B5%5D%7D&preferred=%7B%22occupation%22%3A%5B%22613204%22%5D%2C%22district%22%3A%5B%22%EA%B0%95%EB%82%A8%EA%B5%AC%22%5D%2C%22wage%22%3A%7B%22type%22%3A%22%EC%9B%94%EA%B8%89%22%2C%22minimum%22%3A3000000%7D%2C%22workdays%22%3A%5B5%5D%2C%22employment_type%22%3A%5B%2210%22%5D%7D&page_size=3&group=needs_review",
+      "status": 200,
+      "elapsed_ms": 2217,
+      "response_headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store"
+      },
+      "response": {
+        "data": [
+          {
+            "id": "job-d9b71a0aec07-38954",
+            "title": "5톤 윙바디 운전기사 (야간, 탄력적 근무)",
+            "company": "대신택배삼성",
+            "district": "강남구",
+            "wage_max": null,
+            "wage_min": 4300000,
+            "workdays": null,
+            "posted_at": "2026-10-27",
+            "source_id": "jobs",
+            "wage_text": "월급4,300,000원 이상, 면접 후 재조정 가능",
+            "wage_type": "월급",
+            "experience": "경력",
+            "source_row": 38954,
+            "original_url": null,
+            "deadline_date": "2026-11-30",
+            "deadline_kind": "날짜형",
+            "quality_status": "partial",
+            "recommendation": {
+              "eligibility": "needs_review",
+              "score_label": "55.0 ~ 65.0",
+              "possible_score": 65,
+              "confirmed_score": 55,
+              "selected_weight": 100,
+              "required_details": [
+                {
+                  "field": "workdays",
+                  "state": "unknown",
+                  "factor": null,
+                  "reason": "missing_value"
+                }
+              ],
+              "preference_details": [
+                {
+                  "field": "wage",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "minimum_satisfied",
+                  "weight": 20
+                },
+                {
+                  "field": "district",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 25
+                },
+                {
+                  "field": "workdays",
+                  "state": "unknown",
+                  "factor": null,
+                  "reason": "missing_value",
+                  "weight": 10
+                },
+                {
+                  "field": "occupation",
+                  "state": "mismatch",
+                  "factor": 0,
+                  "reason": "different_value",
+                  "weight": 35
+                },
+                {
+                  "field": "employment_type",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 10
+                }
+              ],
+              "unknown_preferences": 1
+            },
+            "employment_type": "기간의 정함이 없는 근로계약/ 파견근로 비희망/ 대체인력채용 비희망",
+            "occupation_code": "622300",
+            "occupation_name": "화물차 및 특수차 운전원(622300)",
+            "conversion_verified": false,
+            "employment_type_code": "10"
+          },
+          {
+            "id": "job-d9b71a0aec07-41129",
+            "title": "대치 아이파크 보안요원 모집",
+            "company": "(유)미래환경",
+            "district": "강남구",
+            "wage_max": 3021290,
+            "wage_min": 3021290,
+            "workdays": null,
+            "posted_at": "2026-10-29",
+            "source_id": "jobs",
+            "wage_text": "월급3,021,290원 이상 ~ 3,021,290원 이하,",
+            "wage_type": "월급",
+            "experience": "관계없음",
+            "source_row": 41129,
+            "original_url": null,
+            "deadline_date": "2026-11-12",
+            "deadline_kind": "날짜형",
+            "quality_status": "partial",
+            "recommendation": {
+              "eligibility": "needs_review",
+              "score_label": "45.0 ~ 55.0",
+              "possible_score": 55,
+              "confirmed_score": 45,
+              "selected_weight": 100,
+              "required_details": [
+                {
+                  "field": "workdays",
+                  "state": "unknown",
+                  "factor": null,
+                  "reason": "missing_value"
+                }
+              ],
+              "preference_details": [
+                {
+                  "field": "wage",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "minimum_satisfied",
+                  "weight": 20
+                },
+                {
+                  "field": "district",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 25
+                },
+                {
+                  "field": "workdays",
+                  "state": "unknown",
+                  "factor": null,
+                  "reason": "missing_value",
+                  "weight": 10
+                },
+                {
+                  "field": "occupation",
+                  "state": "mismatch",
+                  "factor": 0,
+                  "reason": "different_value",
+                  "weight": 35
+                },
+                {
+                  "field": "employment_type",
+                  "state": "mismatch",
+                  "factor": 0,
+                  "reason": "different_value",
+                  "weight": 10
+                }
+              ],
+              "unknown_preferences": 1
+            },
+            "employment_type": "기간의 정함이 있는 근로계약3 개월/ 계약기간 만료 후 상용직전환검토/ 파견근로 비희망/ 대체인력채용 비희망",
+            "occupation_code": "541400",
+            "occupation_name": "보안 관제원(541400)",
+            "conversion_verified": false,
+            "employment_type_code": "20"
+          },
+          {
+            "id": "job-d9b71a0aec07-27602",
+            "title": "기전기사 모집 (시설관리)",
+            "company": "(주)신대한관리",
+            "district": "강남구",
+            "wage_max": null,
+            "wage_min": 3049000,
+            "workdays": null,
+            "posted_at": "2026-10-15",
+            "source_id": "jobs",
+            "wage_text": "월급3,049,000원 이상,",
+            "wage_type": "월급",
+            "experience": "경력",
+            "source_row": 27602,
+            "original_url": null,
+            "deadline_date": "2026-12-14",
+            "deadline_kind": "채용시까지(기재일 포함)",
+            "quality_status": "partial",
+            "recommendation": {
+              "eligibility": "needs_review",
+              "score_label": "45.0 ~ 55.0",
+              "possible_score": 55,
+              "confirmed_score": 45,
+              "selected_weight": 100,
+              "required_details": [
+                {
+                  "field": "workdays",
+                  "state": "unknown",
+                  "factor": null,
+                  "reason": "missing_value"
+                }
+              ],
+              "preference_details": [
+                {
+                  "field": "wage",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "minimum_satisfied",
+                  "weight": 20
+                },
+                {
+                  "field": "district",
+                  "state": "match",
+                  "factor": 1,
+                  "reason": "exact_match",
+                  "weight": 25
+                },
+                {
+                  "field": "workdays",
+                  "state": "unknown",
+                  "factor": null,
+                  "reason": "missing_value",
+                  "weight": 10
+                },
+                {
+                  "field": "occupation",
+                  "state": "mismatch",
+                  "factor": 0,
+                  "reason": "different_value",
+                  "weight": 35
+                },
+                {
+                  "field": "employment_type",
+                  "state": "mismatch",
+                  "factor": 0,
+                  "reason": "different_value",
+                  "weight": 10
+                }
+              ],
+              "unknown_preferences": 1
+            },
+            "employment_type": "기간의 정함이 있는 근로계약3 개월/ 파견근로 비희망/ 대체인력채용 비희망",
+            "occupation_code": "702901",
+            "occupation_name": "건물 보수원 및 영선원(아파트 기계?전기 시설관리 제외)(702901)",
+            "conversion_verified": false,
+            "employment_type_code": "20"
+          }
+        ],
+        "page": 1,
+        "view": "all",
+        "group": "needs_review",
+        "total": 626,
+        "counts": {
+          "eligible": 7072,
+          "needs_review": 626
+        },
+        "weights": {
+          "wage": 20,
+          "district": 25,
+          "workdays": 10,
+          "occupation": 35,
+          "employment_type": 10
+        },
+        "page_size": 3,
+        "score_semantics": "선호 조건 일치도이며 합격·취업 확률이 아닙니다.",
+        "alternative_status": "available",
+        "related_relation_count": 0,
+        "sources": [
+          {
+            "id": "districts",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년고용률(시군구)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "halfyear",
+            "age_scope": "15~29세 (CSV 명시)",
+            "unit": "%",
+            "geography_basis": "서울 자치구·거주지 기준 추정",
+            "period": "2021-H1~2026-H1",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_metadata",
+            "notes": "원 표 ID·지역별고용조사 반기 대표 시점·주석 대조 필요. 서울 평균 재계산 금지."
+          },
+          {
+            "id": "employment",
+            "source": "KOSIS · 경제활동인구조사",
+            "title": "청년고용률(시도)",
+            "source_url": "https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=INH_1DA7015S",
+            "table_id": "INH_1DA7015S",
+            "frequency": "quarterly",
+            "age_scope": "15~29세",
+            "unit": "%",
+            "geography_basis": "거주지 기준(전국 표본가구 내 상주 가구원 조사)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": "2026-10-30T19:53:22.127332+00:00",
+            "verification_status": "verified_metadata",
+            "notes": "KOSIS 원 표 101/INH_1DA7015S, T90, 연령75, 지역00(계/Total)·11(서울). 전국 조사 범위와 시도별 총계 메타데이터로 계→전국을 확인. CSV 전체375개 수치 일치·16개 결측 보존, 공개46행 수치 일치. 공식 응답 조회 2026-10-30T19:51:56.378Z. CSV 최초 추출시각은 미기록. 전국은 서울 포함. 표본오차·유의성 미계산. 근거 kosis-employment-20261031."
+          },
+          {
+            "id": "jobs",
+            "source": "서울특별시",
+            "title": "서울시 일자리포털 채용정보",
+            "source_url": "https://data.seoul.go.kr/dataList/OA-23047/S/1/datasetView.do",
+            "table_id": "OA-23047",
+            "frequency": "snapshot",
+            "age_scope": "전체 연령·청년 전용 아님",
+            "unit": "공고 행",
+            "geography_basis": "근무지 서울",
+            "period": "2026-08-31~2026-10-29 등록",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "partial",
+            "notes": "원본 추출시각·현재 모집상태·직종분류 버전 미확인. 공식 카탈로그 스키마와 대조. 원 공고 ID/URL 없음."
+          },
+          {
+            "id": "mapping",
+            "source": "한국고용정보원",
+            "title": "취업알선직업분류 2025 해설서",
+            "source_url": "https://statistics.keis.or.kr/keis/ko/proj/114/pblc/detail.do?categoryIdx=125&pubIdx=11319",
+            "table_id": null,
+            "frequency": "classification_version",
+            "age_scope": "해당 없음",
+            "unit": "직종 코드",
+            "geography_basis": "전국 직업분류",
+            "period": "2025 분류 · 2026-06-30 게시",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "verified_hierarchy_partial",
+            "notes": "공식 PDF 963코드 추출. 공고 코드+명칭 323쌍 일치. 원본 서비스 버전 미기록. 계층 연결만 검증; 관련 직종 추천 관계 없음."
+          },
+          {
+            "id": "market",
+            "source": "한국고용정보원 · 고용24",
+            "title": "2026년 9월 구인구직통계",
+            "source_url": "https://www.keis.or.kr/keis/ko/bbs/123/detail.do?pstSn=64778",
+            "table_id": null,
+            "frequency": "monthly",
+            "age_scope": "전체 연령",
+            "unit": "신규구인인원 명 / 신규구직건수 건",
+            "geography_basis": "구인·구직 등록 지방노동관서 기준",
+            "period": "2026-09",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "local_verified",
+            "notes": "KECO2025 35개, KSCO8 57개 별도 분류. 원본 XLSX SHA256 보존. 공식 첨부와 바이트 일치 미검증."
+          },
+          {
+            "id": "unemployment",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년실업률(시도)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "quarterly",
+            "age_scope": "미확인",
+            "unit": "%",
+            "geography_basis": "시도 (원 표 확인 필요)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_age",
+            "notes": "일반 청년실업률 정의는 15~29세이나 해당 CSV 원 표·연령 선택은 미확인. 공개 수치 제외."
+          }
+        ],
+        "recruitment_status": "스냅샷 · 실제 모집상태 미확인"
+      }
+    },
+    {
+      "name": "검증된 관련 직종0개 보류",
+      "requested_at": "2026-10-30T20:09:53.410Z",
+      "method": "GET",
+      "url": "https://seoul-youth-job-compass.ljg10250000.workers.dev/api/recommendations?preferred=%7B%22occupation%22%3A%5B%22613204%22%5D%2C%22district%22%3A%5B%22%EA%B0%95%EB%82%A8%EA%B5%AC%22%5D%2C%22wage%22%3A%7B%22type%22%3A%22%EC%9B%94%EA%B8%89%22%2C%22minimum%22%3A3000000%7D%2C%22workdays%22%3A%5B5%5D%2C%22employment_type%22%3A%5B%2210%22%5D%7D&view=occupation&page_size=3",
+      "status": 200,
+      "elapsed_ms": 513,
+      "response_headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store"
+      },
+      "response": {
+        "data": [],
+        "page": 1,
+        "view": "occupation",
+        "group": "eligible",
+        "total": 0,
+        "counts": {
+          "eligible": 0,
+          "needs_review": 0
+        },
+        "weights": {
+          "wage": 20,
+          "district": 25,
+          "workdays": 10,
+          "occupation": 35,
+          "employment_type": 10
+        },
+        "page_size": 3,
+        "score_semantics": "선호 조건 일치도이며 합격·취업 확률이 아닙니다.",
+        "alternative_status": "no_verified_related_occupations",
+        "related_relation_count": 0,
+        "sources": [
+          {
+            "id": "districts",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년고용률(시군구)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "halfyear",
+            "age_scope": "15~29세 (CSV 명시)",
+            "unit": "%",
+            "geography_basis": "서울 자치구·거주지 기준 추정",
+            "period": "2021-H1~2026-H1",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_metadata",
+            "notes": "원 표 ID·지역별고용조사 반기 대표 시점·주석 대조 필요. 서울 평균 재계산 금지."
+          },
+          {
+            "id": "employment",
+            "source": "KOSIS · 경제활동인구조사",
+            "title": "청년고용률(시도)",
+            "source_url": "https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=INH_1DA7015S",
+            "table_id": "INH_1DA7015S",
+            "frequency": "quarterly",
+            "age_scope": "15~29세",
+            "unit": "%",
+            "geography_basis": "거주지 기준(전국 표본가구 내 상주 가구원 조사)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": "2026-10-30T19:53:22.127332+00:00",
+            "verification_status": "verified_metadata",
+            "notes": "KOSIS 원 표 101/INH_1DA7015S, T90, 연령75, 지역00(계/Total)·11(서울). 전국 조사 범위와 시도별 총계 메타데이터로 계→전국을 확인. CSV 전체375개 수치 일치·16개 결측 보존, 공개46행 수치 일치. 공식 응답 조회 2026-10-30T19:51:56.378Z. CSV 최초 추출시각은 미기록. 전국은 서울 포함. 표본오차·유의성 미계산. 근거 kosis-employment-20261031."
+          },
+          {
+            "id": "jobs",
+            "source": "서울특별시",
+            "title": "서울시 일자리포털 채용정보",
+            "source_url": "https://data.seoul.go.kr/dataList/OA-23047/S/1/datasetView.do",
+            "table_id": "OA-23047",
+            "frequency": "snapshot",
+            "age_scope": "전체 연령·청년 전용 아님",
+            "unit": "공고 행",
+            "geography_basis": "근무지 서울",
+            "period": "2026-08-31~2026-10-29 등록",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "partial",
+            "notes": "원본 추출시각·현재 모집상태·직종분류 버전 미확인. 공식 카탈로그 스키마와 대조. 원 공고 ID/URL 없음."
+          },
+          {
+            "id": "mapping",
+            "source": "한국고용정보원",
+            "title": "취업알선직업분류 2025 해설서",
+            "source_url": "https://statistics.keis.or.kr/keis/ko/proj/114/pblc/detail.do?categoryIdx=125&pubIdx=11319",
+            "table_id": null,
+            "frequency": "classification_version",
+            "age_scope": "해당 없음",
+            "unit": "직종 코드",
+            "geography_basis": "전국 직업분류",
+            "period": "2025 분류 · 2026-06-30 게시",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "verified_hierarchy_partial",
+            "notes": "공식 PDF 963코드 추출. 공고 코드+명칭 323쌍 일치. 원본 서비스 버전 미기록. 계층 연결만 검증; 관련 직종 추천 관계 없음."
+          },
+          {
+            "id": "market",
+            "source": "한국고용정보원 · 고용24",
+            "title": "2026년 9월 구인구직통계",
+            "source_url": "https://www.keis.or.kr/keis/ko/bbs/123/detail.do?pstSn=64778",
+            "table_id": null,
+            "frequency": "monthly",
+            "age_scope": "전체 연령",
+            "unit": "신규구인인원 명 / 신규구직건수 건",
+            "geography_basis": "구인·구직 등록 지방노동관서 기준",
+            "period": "2026-09",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "local_verified",
+            "notes": "KECO2025 35개, KSCO8 57개 별도 분류. 원본 XLSX SHA256 보존. 공식 첨부와 바이트 일치 미검증."
+          },
+          {
+            "id": "unemployment",
+            "source": "KOSIS · 원 표 연결 미확인",
+            "title": "청년실업률(시도)",
+            "source_url": "https://kosis.kr/visual/eRegionIndex/eRegionTheme.do",
+            "table_id": null,
+            "frequency": "quarterly",
+            "age_scope": "미확인",
+            "unit": "%",
+            "geography_basis": "시도 (원 표 확인 필요)",
+            "period": "2021-Q1~2026-Q3",
+            "retrieved_at": null,
+            "verified_at": null,
+            "verification_status": "pending_age",
+            "notes": "일반 청년실업률 정의는 15~29세이나 해당 CSV 원 표·연령 선택은 미확인. 공개 수치 제외."
+          }
+        ],
+        "recruitment_status": "스냅샷 · 실제 모집상태 미확인"
+      }
+    }
+  ],
+  "calculations": {
+    "occupation_ratio": {
+      "source_id": "market",
+      "period": "2026-09",
+      "classification": "KECO2025",
+      "occupation_name": "건설·채굴 연구개발직 및 공학기술직",
+      "openings_persons": 147,
+      "seeking_cases": 948,
+      "formula": "구인인원(명) / 구직건수(건)",
+      "expected": 0.1550632911392405,
+      "actual": 0.1550632911392405,
+      "unit": "명/건",
+      "age_scope": "전체 연령",
+      "geography_basis": "등록 지방노동관서"
+    },
+    "recommendation": {
+      "request": {
+        "required": {
+          "workdays": [
+            5
+          ]
+        },
+        "preferred": {
+          "occupation": [
+            "613204"
+          ],
+          "district": [
+            "강남구"
+          ],
+          "wage": {
+            "type": "월급",
+            "minimum": 3000000
+          },
+          "workdays": [
+            5
+          ],
+          "employment_type": [
+            "10"
+          ]
+        }
+      },
+      "job_id": "job-d9b71a0aec07-20395",
+      "source_id": "jobs",
+      "source_row": 20395,
+      "formula": "100 × 확인된 선호 가중치 / 선택한 선호 가중치; 미확인은 가능한 최대에만 더함",
+      "independent_calculation": {
+        "eligibility": "eligible",
+        "required_details": [
+          {
+            "field": "workdays",
+            "state": "match",
+            "reason": "exact_match",
+            "factor": 1
+          }
+        ],
+        "preference_details": [
+          {
+            "field": "occupation",
+            "state": "match",
+            "reason": "exact_match",
+            "factor": 1
+          },
+          {
+            "field": "district",
+            "state": "mismatch",
+            "reason": "different_value",
+            "factor": 0
+          },
+          {
+            "field": "wage",
+            "state": "match",
+            "reason": "minimum_satisfied",
+            "factor": 1
+          },
+          {
+            "field": "workdays",
+            "state": "match",
+            "reason": "exact_match",
+            "factor": 1
+          },
+          {
+            "field": "employment_type",
+            "state": "match",
+            "reason": "exact_match",
+            "factor": 1
+          }
+        ],
+        "confirmed_score": 75,
+        "possible_score": 75,
+        "unknown_preferences": 0
+      },
+      "database_calculation": {
+        "eligibility": "eligible",
+        "score_label": "75.0 ~ 75.0",
+        "possible_score": 75,
+        "confirmed_score": 75,
+        "selected_weight": 100,
+        "required_details": [
+          {
+            "field": "workdays",
+            "state": "match",
+            "factor": 1,
+            "reason": "exact_match"
+          }
+        ],
+        "preference_details": [
+          {
+            "field": "wage",
+            "state": "match",
+            "factor": 1,
+            "reason": "minimum_satisfied",
+            "weight": 20
+          },
+          {
+            "field": "district",
+            "state": "mismatch",
+            "factor": 0,
+            "reason": "different_value",
+            "weight": 25
+          },
+          {
+            "field": "workdays",
+            "state": "match",
+            "factor": 1,
+            "reason": "exact_match",
+            "weight": 10
+          },
+          {
+            "field": "occupation",
+            "state": "match",
+            "factor": 1,
+            "reason": "exact_match",
+            "weight": 35
+          },
+          {
+            "field": "employment_type",
+            "state": "match",
+            "factor": 1,
+            "reason": "exact_match",
+            "weight": 10
+          }
+        ],
+        "unknown_preferences": 0
+      }
+    }
+  },
+  "scope": "Real public snapshots and own API calls. No employment probability, fabricated related links, or competition bonus award claim."
+}

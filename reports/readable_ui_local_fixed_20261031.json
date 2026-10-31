@@ -1,0 +1,248 @@
+{
+  "base": "http://127.0.0.1:8787",
+  "checked_at": "2026-10-30T23:05:50.896Z",
+  "checks": [
+    {
+      "profile": "desktop",
+      "page": "home",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "map",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "capital",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "districts",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "occupations",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "jobs",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "alternative",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "desktop",
+      "page": "detail",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "home",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "map",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "capital",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "districts",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "occupations",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "jobs",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "alternative",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "mobile",
+      "page": "detail",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "narrow",
+      "page": "home",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "narrow",
+      "page": "map",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "narrow",
+      "page": "capital",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "narrow",
+      "page": "districts",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 6,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "narrow",
+      "page": "occupations",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "narrow",
+      "page": "jobs",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "narrow",
+      "page": "alternative",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    },
+    {
+      "profile": "narrow",
+      "page": "detail",
+      "readable_periods": true,
+      "source_disclosure": true,
+      "original_filter_keys": true,
+      "chart_bounds_checked": 0,
+      "axe_violations": 0,
+      "no_overflow": true
+    }
+  ],
+  "errors": [],
+  "jsErrors": []
+}

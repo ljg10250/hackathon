@@ -1,0 +1,116 @@
+{
+  "base": "http://127.0.0.1:8787",
+  "verified_at": "2026-10-30T21:08:56.422Z",
+  "versions": {
+    "@axe-core/playwright": "4.14.0",
+    "playwright": "1.64.1"
+  },
+  "browserVersion": "156.0.8078.74",
+  "mode": "flows_only",
+  "browser": "Installed Chrome; isolated ephemeral contexts; headless",
+  "checks": [
+    {
+      "name": "desktop actual search selection, pagination, detail and return",
+      "passed": true
+    },
+    {
+      "name": "desktop home quarter selection and same-basis comparison",
+      "passed": true
+    },
+    {
+      "name": "desktop recover from a synthetic API failure without sample data",
+      "passed": true
+    },
+    {
+      "name": "desktop empty search and reset",
+      "passed": true
+    },
+    {
+      "name": "desktop district controls, history and job exploration",
+      "passed": true
+    },
+    {
+      "name": "desktop occupation chart controls and raw calculation",
+      "passed": true
+    },
+    {
+      "name": "desktop occupation analysis to verified-group jobs and preserved return",
+      "passed": true
+    },
+    {
+      "name": "desktop capital visualization controls and URL persistence",
+      "passed": true
+    },
+    {
+      "name": "desktop official map25areas, keyboard, heatmap275cells and period switch",
+      "passed": true
+    },
+    {
+      "name": "desktop map to same-district jobs",
+      "passed": true
+    },
+    {
+      "name": "desktop recommendation score, alternatives, unknown group and return",
+      "passed": true
+    },
+    {
+      "name": "desktop required district is not relaxed in region alternative",
+      "passed": true
+    },
+    {
+      "name": "mobile actual search selection, pagination, detail and return",
+      "passed": true
+    },
+    {
+      "name": "mobile home quarter selection and same-basis comparison",
+      "passed": true
+    },
+    {
+      "name": "mobile recover from a synthetic API failure without sample data",
+      "passed": true
+    },
+    {
+      "name": "mobile empty search and reset",
+      "passed": true
+    },
+    {
+      "name": "mobile district controls, history and job exploration",
+      "passed": true
+    },
+    {
+      "name": "mobile occupation chart controls and raw calculation",
+      "passed": true
+    },
+    {
+      "name": "mobile occupation analysis to verified-group jobs and preserved return",
+      "passed": true
+    },
+    {
+      "name": "mobile capital visualization controls and URL persistence",
+      "passed": true
+    },
+    {
+      "name": "mobile official map25areas, keyboard, heatmap275cells and period switch",
+      "passed": true
+    },
+    {
+      "name": "mobile map to same-district jobs",
+      "passed": true
+    },
+    {
+      "name": "mobile recommendation score, alternatives, unknown group and return",
+      "passed": true
+    },
+    {
+      "name": "mobile required district is not relaxed in region alternative",
+      "passed": true
+    }
+  ],
+  "audits": [],
+  "errors": [],
+  "requests": [],
+  "passed": 24,
+  "failed": 0,
+  "axe_violations": null,
+  "limitations": "Chromium viewport/touch emulation only. Does not certify all WCAG criteria or physical iOS/Android devices."
+}

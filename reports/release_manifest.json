@@ -1,0 +1,13 @@
+{
+  "archive": "seoul_job_compass_stage2_bundle.zip",
+  "files": 130,
+  "bytes": 1891767,
+  "sha256": "83287be745ea57e88c99fa85ab38ad601664ffbad1a2b6101cd0080c8422d26e",
+  "excluded": [
+    "node_modules",
+    "credentials",
+    "local logs",
+    "original/stage1 input files",
+    "official PDF"
+  ]
+}

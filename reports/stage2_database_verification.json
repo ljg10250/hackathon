@@ -1,0 +1,35 @@
+[
+  {
+    "verification": {
+      "counts": {
+        "jobs": 10748,
+        "data_imports": 6,
+        "data_sources": 6,
+        "occupation_mappings": 323,
+        "district_youth_stats": 275,
+        "youth_employment_stats": 92,
+        "occupation_market_stats": 92
+      },
+      "districts": 25,
+      "rls_tables": 7,
+      "market_totals": [
+        {
+          "categories": 57,
+          "seeking_cases": 59668,
+          "classification": "KSCO8",
+          "openings_people": 18299
+        },
+        {
+          "categories": 35,
+          "seeking_cases": 59668,
+          "classification": "KECO2025",
+          "openings_people": 18299
+        }
+      ],
+      "related_edges": 0,
+      "jobs_quarantined": 5,
+      "workdays_unknown": 631,
+      "wage_conversion_verified": 0
+    }
+  }
+]

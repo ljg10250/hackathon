@@ -1,0 +1,80 @@
+{
+  "verified_at": "2026-10-30T20:51:04.504258+00:00",
+  "features": 25,
+  "official_code_name_matches": 25,
+  "statistics_code_name_matches": 25,
+  "national_shapefile_records": 252,
+  "source_crs": "Korea_2000_Korea_Unified_Coordinate_System (meters)",
+  "native_bbox": [
+    935035.2549,
+    1936665.5480000004,
+    972067.5691999998,
+    1966987.1572999991
+  ],
+  "svg_viewbox": [
+    0,
+    0,
+    860,
+    720
+  ],
+  "projection": "Uniform affine scale, y inverted, north up. No geographical coordinates fabricated.",
+  "simplification_tolerance_m": 40,
+  "raw_points": 51748,
+  "simplified_points": 1894,
+  "label_points_inside": true,
+  "provenance": {
+    "retrieved_at": "2026-10-30T20:51:04.504258+00:00",
+    "source_url": "https://www.data.go.kr/data/15129688/fileData.do",
+    "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000003681593&fileDetailSn=1",
+    "boundary_period": "2025-Q2",
+    "license": "이용허락범위 제한 없음 (공식 카탈로그)",
+    "archive_complete": false,
+    "archive_expected_bytes": 269032521,
+    "archive_received_bytes": 161079288,
+    "received_prefix_sha256": "36bfdd60dee4ebf4f7cdf79ebab637a817859e1cbda56a039343bac8c0de49fe",
+    "note": "Whole archive transfer timed out. All five required sigungu entries are complete, decompressed to EOF and individually CRC32 verified. No incomplete geometry used.",
+    "entries": [
+      {
+        "archive_entry": "국가데이터처_SGIS 행정구역 통계 및 경계/2. 경계/2. 2025년 2분기 기준 시군구 경계/bnd_sigungu_00_2025_2Q.cpg",
+        "file": "bnd_sigungu_00_2025_2Q.cpg",
+        "bytes": 5,
+        "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+        "crc32": "0e813c50",
+        "crc_verified": true
+      },
+      {
+        "archive_entry": "국가데이터처_SGIS 행정구역 통계 및 경계/2. 경계/2. 2025년 2분기 기준 시군구 경계/bnd_sigungu_00_2025_2Q.dbf",
+        "file": "bnd_sigungu_00_2025_2Q.dbf",
+        "bytes": 9958,
+        "sha256": "18f7d3a5f0fd8cf12e4a5deca3faf52133db4f7221dfbeccedf94ec06b58ece6",
+        "crc32": "63ecfedb",
+        "crc_verified": true
+      },
+      {
+        "archive_entry": "국가데이터처_SGIS 행정구역 통계 및 경계/2. 경계/2. 2025년 2분기 기준 시군구 경계/bnd_sigungu_00_2025_2Q.prj",
+        "file": "bnd_sigungu_00_2025_2Q.prj",
+        "bytes": 435,
+        "sha256": "e21b26451491c617318aab7d28abf4d07f5facc2aed1564e082ec8d4268cfa3b",
+        "crc32": "279dce3b",
+        "crc_verified": true
+      },
+      {
+        "archive_entry": "국가데이터처_SGIS 행정구역 통계 및 경계/2. 경계/2. 2025년 2분기 기준 시군구 경계/bnd_sigungu_00_2025_2Q.shp",
+        "file": "bnd_sigungu_00_2025_2Q.shp",
+        "bytes": 97462924,
+        "sha256": "85523b10411652aa6b5c286a82eff7e77c7e563d5f644eb62a221a121f7e3968",
+        "crc32": "644cc4dd",
+        "crc_verified": true
+      },
+      {
+        "archive_entry": "국가데이터처_SGIS 행정구역 통계 및 경계/2. 경계/2. 2025년 2분기 기준 시군구 경계/bnd_sigungu_00_2025_2Q.shx",
+        "file": "bnd_sigungu_00_2025_2Q.shx",
+        "bytes": 2116,
+        "sha256": "9fbaeb394ffde8be2fce4e47f2420ac63942fbbdf6c15cf2c71ac69136b9428c",
+        "crc32": "ac8053be",
+        "crc_verified": true
+      }
+    ]
+  },
+  "passed": true
+}
