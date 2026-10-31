@@ -18,6 +18,28 @@ React + Cloudflare Workers Static Assets / 자체 API + Supabase PostgreSQL.
 - [DB와 API 설계](docs/ARCHITECTURE.md)
 - [출처 등록부](data/metadata/sources.json)
 
+## 자체 API 배포 서버 및 호출 방법
+
+- **배포 서버 주소:** https://seoul-youth-job-compass.ljg10250000.workers.dev
+- **API 기본 주소:** https://seoul-youth-job-compass.ljg10250000.workers.dev/api
+- **서버 코드:** [worker/index.ts](worker/index.ts)
+- Cloudflare Workers에서 웹사이트와 자체 REST API를 함께 제공하며, 공개 조회 API는 별도의 인증키 없이 GET 요청으로 호출합니다. 응답 형식은 JSON입니다. `/api`는 경로 접두어이므로 아래의 실제 엔드포인트로 호출하세요.
+
+| API | 실제 호출 주소 | 반환 내용 |
+| --- | --- | --- |
+| 서버·DB 연결 상태 | [GET /api/health](https://seoul-youth-job-compass.ljg10250000.workers.dev/api/health) | 서버 상태와 DB 연결 상태 |
+| 서울·전국 고용률 비교 | [GET /api/indicators?metric=employment_rate](https://seoul-youth-job-compass.ljg10250000.workers.dev/api/indicators?metric=employment_rate) | 고용률, 서울−전국 격차(%p), 전년 동기 변화와 출처 |
+| 직종별 구인·구직 비교 | [GET /api/occupations?period=2026-09&classification=KECO2025](https://seoul-youth-job-compass.ljg10250000.workers.dev/api/occupations?period=2026-09&classification=KECO2025) | 신규구인인원(명), 신규구직건수(건), 비율 |
+| 공고 검색·페이지 처리 | [GET /api/jobs?page=1&page_size=5](https://seoul-youth-job-compass.ljg10250000.workers.dev/api/jobs?page=1&page_size=5) | 공고5건, 전체 검색 건수와 페이지 정보 |
+
+```sh
+curl "https://seoul-youth-job-compass.ljg10250000.workers.dev/api/indicators?metric=employment_rate"
+```
+
+시연: ‘고용 현황’에서 개발자 도구의 Network → Fetch/XHR를 선택하고 새로고침한 뒤, `/api/indicators`의 Response를 보여줍니다. 화면의 그래프와 같은 API 응답임을 확인할 수 있습니다.
+
+자체 API는 검증 후 Supabase에 저장한 공공데이터를 조회·가공합니다. KOSIS를 실시간 호출하는 MCP 서버가 아닙니다. 위4개 호출 주소는 2026-10-31 공개 서버에서 HTTP200 응답을 확인했습니다.
+
 ## 실행
 
 Node.js 24 LTS, Python 3.14로 확인했습니다. `npm ci` 후 `npm run build`,
