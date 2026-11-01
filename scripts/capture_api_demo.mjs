@@ -2,7 +2,7 @@
 import {writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {evaluateJob} from '../worker/recommendation.ts';
-const base=process.argv[2]??'https://seoul-youth-job-compass.ljg10250000.workers.dev';
+const base=process.argv[2]??'https://kongju-hackathon-jabjapda.ljg10250000.workers.dev';
 const output=process.argv[3]??`reports/api_demo_${new Date().toISOString().replace(/[:.]/g,'-')}.json`;
 const calls=[];
 async function get(name,path){const at=new Date().toISOString(),start=performance.now(),response=await fetch(base+path,{signal:AbortSignal.timeout(15000)}),body=await response.json();assert.equal(response.status,200,name);calls.push({name,requested_at:at,method:'GET',url:base+path,status:response.status,elapsed_ms:Math.round(performance.now()-start),response_headers:{'content-type':response.headers.get('content-type'),'cache-control':response.headers.get('cache-control')},response:body});return body;}

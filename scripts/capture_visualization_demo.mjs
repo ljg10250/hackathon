@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {writeFile} from 'node:fs/promises';
 import {seoulMapData} from '../web/seoulMapData.ts';
-const base=process.argv[2]??'https://seoul-youth-job-compass.ljg10250000.workers.dev',out=process.argv[3]??`reports/visualization_demo_${Date.now()}.json`,calls=[];
+const base=process.argv[2]??'https://kongju-hackathon-jabjapda.ljg10250000.workers.dev',out=process.argv[3]??`reports/visualization_demo_${Date.now()}.json`,calls=[];
 async function get(path){const at=new Date().toISOString(),r=await fetch(base+path,{signal:AbortSignal.timeout(20000)}),body=await r.json();assert.equal(r.status,200);calls.push({url:base+path,requested_at:at,status:r.status,response:body});return body;}
 const old=await get('/api/indicators'),capital=await get('/api/visualizations?area=capital'),districts=await get('/api/visualizations?area=districts');
 assert.equal(old.data.length,46);assert.equal(old.comparison_enabled,true);assert.equal(capital.data.length,92);assert.equal(districts.data.length,275);assert.equal(seoulMapData.length,25);

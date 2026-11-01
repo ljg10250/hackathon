@@ -1,6 +1,6 @@
 # 사이트·자체 API 시연
 
-사이트: https://seoul-youth-job-compass.ljg10250000.workers.dev
+사이트: https://kongju-hackathon-jabjapda.ljg10250000.workers.dev
 
 사용자가 알려준 전체 발표시간5분 중 사이트 시연을 약90초로 잡은 예시입니다.
 
@@ -14,7 +14,7 @@
 실행 로그를 새로 남기려면 다음 명령을 사용합니다.
 
 ```sh
-node scripts/capture_api_demo.mjs https://seoul-youth-job-compass.ljg10250000.workers.dev reports/api_demo_NEW.json
+node scripts/capture_api_demo.mjs https://kongju-hackathon-jabjapda.ljg10250000.workers.dev reports/api_demo_NEW.json
 ```
 
 과거 실제 호출·계산 근거는 [기본 시연](../reports/api_demo_20261031.json), [비교 보완](../reports/api_demo_comparison_20261031.json), [시각화](../reports/visualization_api_demo_20261031.json)에 있습니다. 모집상태·실업률 연령·관련직종·통근시간·사용자 효과의 미확인을 밝힙니다. 제출 항목은 [사용자 제공 기준](JUDGING_CRITERIA.md)을 확인하며 실제 제출·최종 가산점은 이 프로젝트의 검사만으로 확정하지 않습니다.

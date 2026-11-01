@@ -10,7 +10,7 @@
 | RLS | 7항목 | [RLS검사](resume_rls_2026-11-01T06-37-24-884Z.json) |
 | PC/모바일 차트·메뉴·필터 | 로컬/공개 각각390·1280px×5화면 | [로컬](cleanup_local_20261101/local-qa.json), [공개](cleanup_public_20261101/public-qa.json) |
 
-마지막 공개 배포는914a0dd1-04e1-44d2-b700-5c82ea9141d1입니다. 이후 파일·문서 정리는 런타임을 바꾸지 않았습니다. 물리 기기·Safari/Firefox·전체WCAG 인증·사용자 취업 효과 검증은 포함하지 않습니다.
+현재 운영 Worker는kongju-hackathon-jabjapda이며 마지막 공개 배포는170663b5-a33d-4a65-a73b-403fe4159daa입니다. 주소 전환 후 HTTP17·추천27·시각화12검사(367개 값)·PC/모바일10화면을 재검증했습니다. [전환 기록](DOMAIN_SWITCH_20261101.md)을 따르며 아래 정리 직전 기록과 구분합니다. 물리 기기·Safari/Firefox·전체WCAG 인증·사용자 취업 효과 검증은 포함하지 않습니다.
 
 ## 재현
 

@@ -2,8 +2,8 @@
 
 서울 청년 구직자를 위한 공공데이터 기반 고용 현황 비교·채용공고 탐색 서비스입니다.
 
-- 사이트: https://seoul-youth-job-compass.ljg10250000.workers.dev
-- **자체 API 호출 주소:** https://seoul-youth-job-compass.ljg10250000.workers.dev/api/indicators?metric=employment_rate
+- 사이트: https://kongju-hackathon-jabjapda.ljg10250000.workers.dev
+- **자체 API 호출 주소:** https://kongju-hackathon-jabjapda.ljg10250000.workers.dev/api/indicators?metric=employment_rate
 - [API 서버·호출 방법](API_SERVER.md) · [주소만 복사](API_URL.txt) · [서버 코드](worker/index.ts)
 
 ## 제공 기능
@@ -32,7 +32,7 @@ npm test
 npm run build
 node scripts/smoke.mjs http://localhost:8787
 npm run deploy
-node scripts/smoke.mjs https://seoul-youth-job-compass.ljg10250000.workers.dev
+node scripts/smoke.mjs https://kongju-hackathon-jabjapda.ljg10250000.workers.dev
 ```
 
 실제 API·페이지·RLS·브라우저 검증 방법과 마지막 결과는 [검증 기준](reports/VALIDATION.md)을 따릅니다. 검사 결과는 새 경로에 기록합니다.
