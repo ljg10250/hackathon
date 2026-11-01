@@ -16,3 +16,6 @@ data/metadata/*.pdf
 data/metadata/*.txt
 
 **/.temp/
+
+__pycache__/
+*.py[cod]

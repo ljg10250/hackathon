@@ -140,3 +140,5 @@ node scripts/check_browser.mjs https://seoul-youth-job-compass.ljg10250000.worke
 ## 2026-11-01 프로젝트 정리
 
 주 메뉴는5개이며 발표 메뉴·PPT·슬라이드 자산을 제거했습니다. 원본 데이터와 출처·검증 근거는 보존하고 예전 임시 빌드·중복 코드 사본·미검증 MCP 초안은 정리했습니다. `npm run check`는 미사용 import와 변수도 검사합니다. [정리 보고서](reports/CLEANUP_20261101.md)를 참고하세요. 배포 사이트와 자체API 주소는 그대로입니다.
+
+실제 서비스 폴더와 Git 작업 폴더를 하나로 통합했습니다. 전처리 CSV 입력은 data/stage1/에 보관하며, 별도 최상위 사본은 제거했습니다. [추가 정리 결과](reports/FILE_CLEANUP_20261101_FINAL.md).
