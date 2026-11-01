@@ -1,0 +1,142 @@
+{
+  "base": "http://127.0.0.1:8787",
+  "verified_at": "2026-11-01T06:37:27.655Z",
+  "checks": [
+    {
+      "name": "HTTP /api/indicators",
+      "status": 200,
+      "elapsed_ms": 1435
+    },
+    {
+      "name": "HTTP /api/indicators?metric=unemployment_rate",
+      "status": 200,
+      "elapsed_ms": 93
+    },
+    {
+      "name": "HTTP /api/districts?period=2026-H1",
+      "status": 200,
+      "elapsed_ms": 140
+    },
+    {
+      "name": "HTTP /api/districts?district=%EA%B0%95%EB%82%A8%EA%B5%AC",
+      "status": 200,
+      "elapsed_ms": 95
+    },
+    {
+      "name": "HTTP /api/districts?district=%EA%B0%95%EB%82%A8%EA%B5%AC&period=2021-H1",
+      "status": 200,
+      "elapsed_ms": 116
+    },
+    {
+      "name": "HTTP /api/districts?district=%EA%B0%95%EB%82%A8%EA%B5%AC&period=2020-H1",
+      "status": 200,
+      "elapsed_ms": 82
+    },
+    {
+      "name": "HTTP /api/districts?district=%EB%B6%80%EC%82%B0",
+      "status": 400,
+      "elapsed_ms": 77
+    },
+    {
+      "name": "HTTP /api/occupations",
+      "status": 200,
+      "elapsed_ms": 87
+    },
+    {
+      "name": "HTTP /api/jobs?district=%EA%B0%95%EB%82%A8%EA%B5%AC&page=2&page_size=10",
+      "status": 200,
+      "elapsed_ms": 87
+    },
+    {
+      "name": "HTTP /api/jobs/job-d9b71a0aec07-40413",
+      "status": 200,
+      "elapsed_ms": 64
+    },
+    {
+      "name": "HTTP /api/job-occupations",
+      "status": 200,
+      "elapsed_ms": 30
+    },
+    {
+      "name": "HTTP /api/job-occupations?q=531400",
+      "status": 200,
+      "elapsed_ms": 69
+    },
+    {
+      "name": "HTTP /api/job-occupations?limit=100",
+      "status": 400,
+      "elapsed_ms": 59
+    },
+    {
+      "name": "HTTP /api/job-occupations?q=없는직종검사문구",
+      "status": 200,
+      "elapsed_ms": 123
+    },
+    {
+      "name": "React verified same-quarter employment comparison",
+      "passed": true
+    },
+    {
+      "name": "React unverified metadata never enables comparison",
+      "passed": true
+    },
+    {
+      "name": "React district 25 bars and half-year history",
+      "passed": true
+    },
+    {
+      "name": "React occupation separate units and 35-row table",
+      "passed": true
+    },
+    {
+      "name": "React search filters and page-size-aware next link",
+      "passed": true
+    },
+    {
+      "name": "React detail preserves recommendation view, group and page",
+      "passed": true
+    },
+    {
+      "name": "React detail rejects an external return URL",
+      "passed": true
+    },
+    {
+      "name": "React empty jobs and null field remain explicit",
+      "passed": true
+    },
+    {
+      "name": "React zero/null table formatting",
+      "passed": true
+    },
+    {
+      "name": "React missing observations break chart lines",
+      "passed": true
+    },
+    {
+      "name": "React route shell /",
+      "passed": true
+    },
+    {
+      "name": "React route shell /districts",
+      "passed": true
+    },
+    {
+      "name": "React route shell /occupations",
+      "passed": true
+    },
+    {
+      "name": "React route shell /jobs",
+      "passed": true
+    },
+    {
+      "name": "React route shell /jobs/job-d9b71a0aec07-40413",
+      "passed": true
+    },
+    {
+      "name": "React recommendation picker and mandatory label",
+      "passed": true
+    }
+  ],
+  "passed": 30,
+  "limitation": "Actual API and React SSR. Browser input, layout, mobile and focus behavior are not verified."
+}
