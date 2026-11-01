@@ -15,4 +15,4 @@
 
 배포 버전: `10e8d259-0944-48e0-8045-344f423f14df`.
 
-검증 JSON·스크린샷: 원본 작업 폴더 `implementation/chart_insights/{local,public}-qa.json` 및 PNG. 데이터·API·DB·그래프 축·지도 색 범례는 변경하지 않았다.
+검증 JSON·스크린샷: 원본 작업 폴더 `reports/chart_insights_20261031/{local,public}-qa.json` 및 PNG. 데이터·API·DB·그래프 축·지도 색 범례는 변경하지 않았다.

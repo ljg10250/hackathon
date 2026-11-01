@@ -1,7 +1,7 @@
 import OccupationPicker from './OccupationPicker';
 import JobModeSwitch from './JobModeSwitch';
 import {Sources} from './shared';
-import React,{useEffect,useState} from 'react';
+import {useEffect,useState} from 'react';
 import {DISTRICTS,type Conditions} from '../worker/recommendation';
 type Source=Record<string,string|number|boolean|null>;
 type Detail={field:string;state:string;reason:string;weight?:number;factor:number|null};

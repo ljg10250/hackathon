@@ -1,4 +1,4 @@
-import React,{useEffect,useId,useState} from 'react';
+import {useEffect,useId,useState} from 'react';
 type Option={code:string;name:string};
 type OptionsResult={data:Option[];total:number;error?:string};
 export default function OccupationPicker({defaultValue='',label='직종',name='occupation'}:{defaultValue?:string;label?:string;name?:string}){

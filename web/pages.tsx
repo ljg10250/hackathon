@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import {useState} from 'react';
 import {DISTRICTS} from '../worker/recommendation';
 import {LineChart,BarChart} from './charts';
 import {useData,Sources,Loading,Table,Empty,fmt,periodLabel,type Payload,type Row} from './shared';

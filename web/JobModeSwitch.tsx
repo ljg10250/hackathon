@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function JobModeSwitch({mode,search}:{mode:'search'|'recommend';search:string}){
  const params=new URLSearchParams(search),general=new URLSearchParams(),recommend=new URLSearchParams({mode:'recommend'});

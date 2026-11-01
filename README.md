@@ -136,3 +136,7 @@ node scripts/check_browser.mjs https://seoul-youth-job-compass.ljg10250000.worke
 최신 판정: [시각화 검증 보고서](reports/VISUALIZATION_IMPLEMENTATION_REPORT.md). 기존 comparison 후보와 보고서는 이전 버전이다. 현재 후보는 `seoul_job_compass_visualization_20261031.zip`, 무결성 기록은 `reports/candidate_manifest_visualization_20261031.json`을 따른다.
 
 한눈에 보기의 기본 화면은 서울 지도·변화표다. 기본 표시 변경 후속 기록은 [MAP_DEFAULT_CHANGE_20261031.md](reports/MAP_DEFAULT_CHANGE_20261031.md)를 따른다. 이전 후보 ZIP은 기본 표시 변경 전 버전으로 보존했다.
+
+## 2026-11-01 프로젝트 정리
+
+주 메뉴는5개이며 발표 메뉴·PPT·슬라이드 자산을 제거했습니다. 원본 데이터와 출처·검증 근거는 보존하고 예전 임시 빌드·중복 코드 사본·미검증 MCP 초안은 정리했습니다. `npm run check`는 미사용 import와 변수도 검사합니다. [정리 보고서](reports/CLEANUP_20261101.md)를 참고하세요. 배포 사이트와 자체API 주소는 그대로입니다.

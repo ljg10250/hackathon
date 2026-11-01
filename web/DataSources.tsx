@@ -1,4 +1,3 @@
-import React from 'react';
 import type {Row} from './shared';
 import {periodLabel,frequencyLabel,verificationLabel} from './format';
 

@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import {useEffect,useState} from 'react';
 import {useData,Loading,Sources,Table,periodLabel,type Payload,type Row} from './shared';
 import {BarChart,LineChart,MultiLineChart,ChartInsight} from './charts';
 import {barInsight,heatmapInsight} from './chartInsights';
